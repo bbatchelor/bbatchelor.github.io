@@ -58,6 +58,7 @@ html {
 	overflow-y: scroll;
 	-webkit-overflow-scrolling: touch;
 	font-family: 'PT Sans', sans-serif;
+	font-weight: bold;
 	-webkit-tap-highlight-color: transparent;
 }
 
@@ -108,7 +109,6 @@ html {
 	width: 100%;
 	float: left;
 	display: inline-block;
-	font-weight: bold;
 }
 
 .top-bar .fa {
@@ -192,12 +192,12 @@ html {
 	width: 90%;
 }
 
-a#sticky-logo {
+a#sticky_logo {
 	display: table-cell;
 	vertical-align: middle;
 }
 
-a#sticky-logo img {
+a#sticky_logo img {
 	vertical-align: middle;
 	max-height: 51px;
 	display: table-cell;
@@ -217,7 +217,6 @@ a#sticky-logo img {
 	float: right;
 	text-align: left;
 	color: #b64445;
-	font-weight: bold;
 }
 
 .site-user .arrow-down {
@@ -229,7 +228,7 @@ a#sticky-logo img {
 	vertical-align: middle;
 }
 
-.site-username-wrap {
+.admin-add-new-employee, .site-username-wrap {
 	cursor: pointer;
 }
 
@@ -259,7 +258,7 @@ a#sticky-logo img {
 	position: absolute;
 	pointer-events: none;
 	border-bottom-color: #000000;
-	border-width: 3px;
+	border-width: 5px;
 }
 
 .site-user-options li {
@@ -305,7 +304,6 @@ a#sticky-logo img {
 .footer-menu li a {
 	font-size: 13px;
 	color: inherit;
-	font-weight: bold;
 }
 
 .footer-menu li a:hover {
@@ -318,7 +316,6 @@ a#sticky-logo img {
 	text-align: center;
 	display: block;
 	font-size: 14px;
-	font-weight: bold;
 }
 
 .social-icons {
@@ -354,12 +351,11 @@ a#sticky-logo img {
 }
 
 .page-heading h1 {
-	font-size: 20px;
+	font-size: 18px;
 	font-family: 'Montserrat', sans-serif;
 	float: left;
 	margin: 0;
 	text-transform: uppercase;
-	font-weight: bold;
 }
 
 .container:before, .container:after, .clearfix:before, .clearfix:after,
@@ -373,9 +369,129 @@ a#sticky-logo img {
 	{
 	clear: both;
 }
+
+/* MAIN CONTENT */
+/* SUPERADMIN */
+.superadmin-user-table {
+	border-radius: 5px;
+	border: 0.5px solid #bebebe;
+}
+
+.user-table-header {
+	background-color: #e7e7e7;
+	padding: 16px 20px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	line-height: 2.75;
+	text-align: left;
+	color: #000000;
+}
+
+.user-table-header, .user-table>li {
+	display: flex;
+	justify-content: space-between;
+}
+
+.admin-add-new-employee, .superadmin-user-name {
+	color: #b64445;
+}
+
+.user-table>li {
+	padding: 16px 20px;
+	border-bottom: 1px solid #bebebe;
+}
+
+.superadmin-user-wrap {
+	font-size: 14px;
+}
+
+.superadmin-user-wrap, .superadmin-user-wrap span,
+	.superadmin-user-delete {
+	display: block;
+}
+
+.superadmin-user-email {
+	color: #7e7e7e;
+}
+
+/* POPUPS */
+.popup {
+	background-color: rgba(255, 255, 255, 0.9);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: none;
+}
+
+.hide-body {
+	overflow: hidden;
+}
+
+.popup-content {
+	border-radius: 5px;
+	background-color: #ffffff;
+	box-shadow: 0 0 3.5px 0 rgba(0, 0, 0, 0.35);
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	max-height: 340px;
+	height: 50%;
+	width: 90%;
+	max-width: 313px;
+	margin: auto;
+}
+
+.popup-header {
+	font-size: 16px;
+	display: block;
+	text-align: center;
+	padding: 25px 0;
+	color: #2a2a2a;
+}
+
+.popup-body {
+	text-align: center;
+	padding: 40px 30px 20px;
+}
+
+.popup-body input {
+	display: block;
+	font-size: 12px;
+	color: #7e7e7e;
+	padding: 10px 0;
+	border-radius: 0;
+	border: none;
+	border-bottom: 0.5px solid rgba(127, 127, 127, 0.4);
+	box-shadow: none;
+	margin-bottom: 5px;
+	width: 100%;
+	font-weight: bold;
+}
+
+.popup-body button:focus, .popup-body input:focus {
+	outline: none;
+}
+
+.popup-body button {
+	margin-top: 30px;
+	width: 100%;
+	padding: 12px 0;
+	border-radius: 5px;
+	background-color: #850d0c;
+	box-shadow: 0 0 3.5px 0 rgba(0, 0, 0, 0.35);
+	border: none;
+	color: #fff;
+	font-size: 12px;
+	font-weight: bold;
+}
+
 /* ALL MEDIA QUERIES */
 @media ( min-width : 440px) {
-	a#sticky-logo img {
+	a#sticky_logo img {
 		max-width: 100%;
 	}
 }

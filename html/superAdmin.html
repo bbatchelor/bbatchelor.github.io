@@ -11,8 +11,7 @@
 <meta name="keywords"
 	content="Batchelor & Kimball, mechanical contractor, commercial HVAC, plumbing system,">
 <link rel="stylesheet" href="../css/main.css" media="all">
-<link rel="stylesheet" id="font-awesome-4-5-css"
-	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css?ver=4.6.1"
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css?ver=4.6.1"
 	type="text/css" media="none" onload="if(media!='all')media='all'">
 </head>
 <body>
@@ -50,7 +49,7 @@
 			<nav class="nav-wrap unstick">
 				<div class="container">
 					<div class="logo-wrap">
-						<a id="sticky-logo" href="http://bkimechanical.flywheelsites.com/">
+						<a id="sticky_logo" href="http://bkimechanical.flywheelsites.com/">
 							<img alt="Site logo" src="../images/bkiLogo.png">
 						</a>
 					</div>
@@ -59,6 +58,7 @@
 							class="site-username">JOHN DOE</span> <span class="arrow-down"></span>
 						</span>
 						<ul class="site-user-options">
+						    <li><a href="#">Profile</a></li>
 							<li><a href="#">Logout</a></li>
 						</ul>
 					</div>
@@ -76,7 +76,89 @@
 		<!-- BREADCRUMB SECTION END -->
 		
 		<!-- MAIN CONTENT SECTION -->
+		<section class="container">
+		    <div class="superadmin-user-table">
+		        <div class="user-table-header">
+		            <span class="admin-acess-row">Admin Access</span>
+		             <span class="admin-add-new-employee" id="add_new_employee_link">+ ADD NEW</span>
+		        </div>
+		        <ul class="user-table">
+		            <li>
+		                <span class="superadmin-user-wrap">
+		                    <span class="superadmin-user-name">John Doe</span>
+		                    <span class="superadmin-user-email">john.doe@gmail.com</span>
+		                </span>
+		                <span class="superadmin-user-delete">
+		                <img alt="Delete User" src="">
+		                </span>
+		            </li>
+		            <li>
+		                <span class="superadmin-user-wrap">
+		                    <span class="superadmin-user-name">John Doe</span>
+		                    <span class="superadmin-user-email">john.doe@gmail.com</span>
+		                </span>
+		                <span class="superadmin-user-delete">
+		                <img alt="Delete User" src="">
+		                </span>
+		            </li>
+		            <li>
+		                <span class="superadmin-user-wrap">
+		                    <span class="superadmin-user-name">John Doe</span>
+		                    <span class="superadmin-user-email">john.doe@gmail.com</span>
+		                </span>
+		                <span class="superadmin-user-delete">
+		                <img alt="Delete User" src="">
+		                </span>
+		            </li>
+		            <li>
+		                <span class="superadmin-user-wrap">
+		                    <span class="superadmin-user-name">John Doe</span>
+		                    <span class="superadmin-user-email">john.doe@gmail.com</span>
+		                </span>
+		                <span class="superadmin-user-delete">
+		                <img alt="Delete User" src="">
+		                </span>
+		            </li>
+		            <li>
+		                <span class="superadmin-user-wrap">
+		                    <span class="superadmin-user-name">John Doe</span>
+		                    <span class="superadmin-user-email">john.doe@gmail.com</span>
+		                </span>
+		                <span class="superadmin-user-delete">
+		                <img alt="Delete User" src="">
+		                </span>
+		            </li>
+		            <li>
+		                <span class="superadmin-user-wrap">
+		                    <span class="superadmin-user-name">John Doe</span>
+		                    <span class="superadmin-user-email">john.doe@gmail.com</span>
+		                </span>
+		                <span class="superadmin-user-delete">
+		                <img alt="Delete User" src="">
+		                </span>
+		            </li>
+		            <li>
+		                <span class="superadmin-user-wrap">
+		                    <span class="superadmin-user-name">John Doe</span>
+		                    <span class="superadmin-user-email">john.doe@gmail.com</span>
+		                </span>
+		                <span class="superadmin-user-delete">
+		                <img alt="Delete User" src="">
+		                </span>
+		            </li>
+		            <li>
+		                <span class="superadmin-user-wrap">
+		                    <span class="superadmin-user-name">John Doe</span>
+		                    <span class="superadmin-user-email">john.doe@gmail.com</span>
+		                </span>
+		                <span class="superadmin-user-delete">
+		                <img alt="Delete User" src="">
+		                </span>
+		            </li>
+		        </ul>
+		    </div>
 		
+		</section>
 		<!-- MAIN CONTENT SECTION END -->
 
 		<!-- FOOTER SECTION -->
@@ -118,6 +200,22 @@
 		</footer>
 		<!-- FOOTER SECTION END -->
 	</div>
+	
+	<!-- POPUPS -->
+	<section id="add_new_employee" class="popup">
+	    <div class="popup-content">
+	        <span class="popup-header">Add New Employee</span>
+	        <div class="popup-body">
+	        <form>
+	            <input type="text" placeholder="Name">
+	            <input type="email" placeholder="Email ID">
+	            <button type="submit">ADD</button>
+	        </form>
+	        </div>
+	    </div>
+	</section>
+	
+	
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script async src="../js/main.js"></script>
