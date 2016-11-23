@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>LOGIN - Batchelor & Kimball</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description"
+	content="Batchelor & Kimball is a mechanical contractor specializing in the design and installation of commercial HVAC, process, mechanical and plumbing systems.  We partner with our clients to deliver results from engineering and construction to operations and maintenance.
+">
+<meta name="keywords"
+	content="Batchelor & Kimball, mechanical contractor, commercial HVAC, plumbing system,">
+<link rel="stylesheet" href="../css/main.css" media="all">
+</head>
+<body>
+
+<!-- LOGIN CONTENT -->
+	<section class="login-popup">
+	    <div class="login-popup-content">
+	        <span class="popup-header"><img alt="B&K" src="../images/bkiLogo.png"></span>
+	        <div class="popup-body">
+	        <form id="login_form">
+	            <input type="text" id="login_name" placeholder="Username">
+	            <input type="password" id="login_password" placeholder="Password">
+	            <span class="login-extra-link-wrap">
+	            <span class="login-extra-link forgot_password popup-link">Forgot Password?</span>
+	             <span class="login-extra-link sign_up popup-link">Not an existing user?</span>
+	            </span>
+	            <button type="button">LOGIN</button>
+	        </form>
+	        </div>
+	    </div>
+	</section>
+	
+	<!-- POPUPS -->
+	<!-- SIGNUP -->
+	<section id="sign_up" class="popup">
+	    <div class="popup-content">
+	         <span class="popup-header"><img alt="B&K" src="../images/bkiLogo.png"></span>
+	        <div class="popup-body">
+	        <form id="signup_form">
+	            <input type="text" id="signup_full_name" placeholder="Full name">
+	            <input type="email" id="signup_id" placeholder="Email ID">
+	            <input type="password" id="signup_password" placeholder="Password">
+	             <a href="loginPage.html" class="login-extra-link">Existing user?</a>
+	            <button type="submit">LOGIN</button>
+	        </form>
+	        </div>
+	    </div>
+	</section>
+	
+	<!-- FORGOT PASSWORD -->
+	<section id="forgot_password" class="popup">
+	    <div class="popup-content">
+	         <span class="popup-header"><img alt="B&K" src="../images/bkiLogo.png"></span>
+	        <div class="popup-body">
+	        <span class="popup-body-text">Enter your email id and we will follow up with an email to reset your password</span>
+	        <form id="forgot_password_form">
+	            <input type="email" id="forgot_pwd_id" placeholder="Email ID">
+	             <a href="loginPage.html" class="login-extra-link">Login</a>
+	            <button type="submit">RESET PASSWORD</button>
+	        </form>
+	        </div>
+	    </div>
+	</section>
+	
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script async src="../js/main.js"></script>
+</body>
+</html>

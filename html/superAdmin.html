@@ -58,8 +58,8 @@
 							class="site-username">JOHN DOE</span> <span class="arrow-down"></span>
 						</span>
 						<ul class="site-user-options">
-						    <li><a href="#">Profile</a></li>
-							<li><a href="#">Logout</a></li>
+						    <li><a href="profilePage.html">Profile</a></li>
+							<li><a href="loginPage.html">Logout</a></li>
 						</ul>
 					</div>
 				</div>
@@ -76,11 +76,11 @@
 		<!-- BREADCRUMB SECTION END -->
 		
 		<!-- MAIN CONTENT SECTION -->
-		<section class="container">
+		<section class="container main-content">
 		    <div class="superadmin-user-table">
 		        <div class="user-table-header">
 		            <span class="admin-acess-row">Admin Access</span>
-		             <span class="admin-add-new-employee" id="add_new_employee_link">+ ADD NEW</span>
+		             <span class="admin-add-new-employee popup-link add_new_employee">+ ADD NEW</span>
 		        </div>
 		        <ul class="user-table">
 		            <li>
@@ -89,7 +89,16 @@
 		                    <span class="superadmin-user-email">john.doe@gmail.com</span>
 		                </span>
 		                <span class="superadmin-user-delete">
-		                <img alt="Delete User" src="">
+		                <img alt="Delete User" src="../images/deleteIcon.png" class="delete_user">
+		                </span>
+		            </li>
+		           <li>
+		                <span class="superadmin-user-wrap">
+		                    <span class="superadmin-user-name">John Doe</span>
+		                    <span class="superadmin-user-email">john.doe@gmail.com</span>
+		                </span>
+		                <span class="superadmin-user-delete">
+		                <img alt="Delete User" src="../images/deleteIcon.png" class="delete_user">
 		                </span>
 		            </li>
 		            <li>
@@ -98,7 +107,7 @@
 		                    <span class="superadmin-user-email">john.doe@gmail.com</span>
 		                </span>
 		                <span class="superadmin-user-delete">
-		                <img alt="Delete User" src="">
+		                <img alt="Delete User" src="../images/deleteIcon.png" class="delete_user">
 		                </span>
 		            </li>
 		            <li>
@@ -107,7 +116,7 @@
 		                    <span class="superadmin-user-email">john.doe@gmail.com</span>
 		                </span>
 		                <span class="superadmin-user-delete">
-		                <img alt="Delete User" src="">
+		                <img alt="Delete User" src="../images/deleteIcon.png" class="delete_user">
 		                </span>
 		            </li>
 		            <li>
@@ -116,7 +125,7 @@
 		                    <span class="superadmin-user-email">john.doe@gmail.com</span>
 		                </span>
 		                <span class="superadmin-user-delete">
-		                <img alt="Delete User" src="">
+		                <img alt="Delete User" src="../images/deleteIcon.png" class="delete_user">
 		                </span>
 		            </li>
 		            <li>
@@ -125,7 +134,7 @@
 		                    <span class="superadmin-user-email">john.doe@gmail.com</span>
 		                </span>
 		                <span class="superadmin-user-delete">
-		                <img alt="Delete User" src="">
+		                <img alt="Delete User" src="../images/deleteIcon.png" class="delete_user">
 		                </span>
 		            </li>
 		            <li>
@@ -134,7 +143,7 @@
 		                    <span class="superadmin-user-email">john.doe@gmail.com</span>
 		                </span>
 		                <span class="superadmin-user-delete">
-		                <img alt="Delete User" src="">
+		                <img alt="Delete User" src="../images/deleteIcon.png" class="delete_user">
 		                </span>
 		            </li>
 		            <li>
@@ -143,16 +152,7 @@
 		                    <span class="superadmin-user-email">john.doe@gmail.com</span>
 		                </span>
 		                <span class="superadmin-user-delete">
-		                <img alt="Delete User" src="">
-		                </span>
-		            </li>
-		            <li>
-		                <span class="superadmin-user-wrap">
-		                    <span class="superadmin-user-name">John Doe</span>
-		                    <span class="superadmin-user-email">john.doe@gmail.com</span>
-		                </span>
-		                <span class="superadmin-user-delete">
-		                <img alt="Delete User" src="">
+		                <img alt="Delete User" src="../images/deleteIcon.png" class="delete_user">
 		                </span>
 		            </li>
 		        </ul>
@@ -206,10 +206,10 @@
 	    <div class="popup-content">
 	        <span class="popup-header">Add New Employee</span>
 	        <div class="popup-body">
-	        <form>
-	            <input type="text" placeholder="Name">
-	            <input type="email" placeholder="Email ID">
-	            <button type="submit">ADD</button>
+	        <form id="add_new_employee_form">
+	            <input type="text" id="new_employee_name" placeholder="Name">
+	            <input type="email" id="new_employee_id" placeholder="Email ID">
+	            <button type="button" id="add_new_employee_btn">ADD</button>
 	        </form>
 	        </div>
 	    </div>
