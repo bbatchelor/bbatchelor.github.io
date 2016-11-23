@@ -29,7 +29,7 @@ $(document).ready(function() {
 	});
 
 //	OPEN POPUP
-	$('.popup-link').click(function(e) {
+	$(document).on('click', '.popup-link', function(e) {
 		var class_name = $(this).attr('class');
 		$('.popup').each(function(){
 			if(class_name.indexOf($(this).attr('id')) != -1){
@@ -46,7 +46,7 @@ $(document).ready(function() {
 	});
 
 //	EDIT EMPLOYEE
-	$('.edit-employee').click(function() {
+	$(document).on('click', '.edit-employee',function() {
 		var edit_row_item = $(this).parent('.superadmin-user-delete').parent('li').index();
 		$('#edit_employee_name').val($(this).parent('.superadmin-user-delete').siblings('.superadmin-user-wrap').find('.superadmin-user-name').text());
 		$('#edit_employee_id').val($(this).parent('.superadmin-user-delete').siblings('.superadmin-user-wrap').find('.superadmin-user-email').text());
@@ -64,7 +64,7 @@ $(document).ready(function() {
 	});
 
 //	EDIT PARENT FOLDER NAME
-	$('.edit-parent-folder').click(function() {
+	$(document).on('click', '.edit-parent-folder', function() {
 		$('#edit_folder_name').val($(this).parent('.superadmin-user-delete').siblings('.superadmin-user-wrap').find('.superadmin-user-name').text());
 
 		$('#edit_folder_btn').click(function(){
@@ -78,7 +78,7 @@ $(document).ready(function() {
 	});
 
 //	EDIT FOLDER NAME
-	$('.edit-folder').click(function() {
+	$(document).on('click', '.edit-folder',function() {
 		var edit_folder_row_item = $(this).parent('.superadmin-user-delete').parent('li').index();
 		$('#edit_folder_name').val($(this).parent('.superadmin-user-delete').siblings('.superadmin-user-wrap').find('.superadmin-user-name').text());
 
@@ -92,46 +92,6 @@ $(document).ready(function() {
 
 	});
 
-	function bindClickToLinkEmployee() {	
-		$('.popup-link').click(function(e) {
-			var cloned_class_name = $(this).attr('class');
-			$('.popup').each(function(){
-				if(cloned_class_name.indexOf($(this).attr('id')) != -1){
-					$(this).addClass('display-popup');
-					$('html').addClass('hide-body');
-				}
-			});
-			e.stopPropagation();
-		});
-
-		$('.edit-employee.new_user_edit').click(function() {
-			var cloned_edit_row_item = $(this).parent('.superadmin-user-delete').parent('li').index();
-			$('#edit_employee_name').val($(this).parent('.superadmin-user-delete').siblings('.superadmin-user-wrap').find('.superadmin-user-name').text());
-			$('#edit_employee_id').val($(this).parent('.superadmin-user-delete').siblings('.superadmin-user-wrap').find('.superadmin-user-email').text());
-
-			$('#edit_employee_btn').click(function(){
-				$('.popup').hide();
-				$('.popup').removeClass('display-popup');
-				$('html').removeClass('hide-body');
-				var cloned_edit_employee_name = $(this).siblings('#edit_employee_name').val();
-				var cloned_edit_employee_id = $(this).siblings('#edit_employee_id').val();
-				$('.user-table li').eq(cloned_edit_row_item).find('.superadmin-user-name').text(cloned_edit_employee_name);
-				$('.user-table li').eq(cloned_edit_row_item).find('.superadmin-user-email').text(cloned_edit_employee_id);;
-			});
-
-		});
-
-		$('.delete_user.new_user_delete').each(function(){
-			$(this).click(function() {
-				if (confirm("Delete The Employee?") == true) {
-					$(this).parent('.superadmin-user-delete').parent('li').remove();
-				} else {
-//					do nothing
-				}
-			});
-		});
-
-	}
 //	ADD NEW EMPLOYEE
 	$('#add_new_employee_btn').click(function() {
 		var new_employee_name = $(this).siblings('#new_employee_name').val();
@@ -151,78 +111,28 @@ $(document).ready(function() {
 		var cloned_first_child = $('.user-table li:first-child');
 		cloned_first_child.find('.superadmin-user-name').text(new_employee_name);
 		cloned_first_child.find('.superadmin-user-email').text(new_employee_id);
-		cloned_first_child.each(function () {
-			bindClickToLinkEmployee();
-		});
+
 	});
 
-	function bindClickToLinkFolder() {	
-		$('.popup-link').click(function(e) {
-			var cloned_class_name = $(this).attr('class');
-			$('.popup').each(function(){
-				if(cloned_class_name.indexOf($(this).attr('id')) != -1){
-					$(this).addClass('display-popup');
-					$('html').addClass('hide-body');
-				}
-			});
-			e.stopPropagation();
-		});
-
-//		EDIT FOLDER NAME
-		$('.edit-folder.new_folder_edit').click(function() {
-			var edit_folder_row_item = $(this).parent('.superadmin-user-delete').parent('li').index();
-			$('#edit_folder_name').val($(this).parent('.superadmin-user-delete').siblings('.superadmin-user-wrap').find('.superadmin-user-name').text());
-
-			$('#edit_folder_btn').click(function(){
-				$('.popup').hide();
-				$('.popup').removeClass('display-popup');
-				$('html').removeClass('hide-body');
-				var edit_folder_name = $(this).siblings('#edit_folder_name').val();
-				$('.all-folders-list li').eq(edit_folder_row_item).find('.superadmin-user-name').text(edit_folder_name);
-			});
-
-		});
-
-//		DELETE FOLDER LIST ITEM
-		$('.delete_folder.new_folder_delete').each(function(){
-			$(this).click(function() {
-				if (confirm("Delete The Folder?") == true) {
-					$(this).parent('.superadmin-user-delete').parent('li').remove();
-				} else {
-//					do nothing
-				}
-			});
-		});
-
-	}
 //	ADD NEW FOLDER
 	$('#add_new_folder_btn').click(function() {
 		var new_folder_name = $(this).siblings('#new_folder_name').val();
-		var cloned_folder_div = null,cloned_new_folder_first_child = null;
+		var cloned_folder_div = '<li><span class="superadmin-user-wrap"><span class="superadmin-user-name"></span></span><span class="superadmin-user-delete"><img alt="Edit Folder" src="../images/editIcon.png" class="edit-employee edit-folder popup-link edit_folder new_folder_edit"><img alt="Delete Folder" src="../images/deleteIcon.png" class="delete_folder new_folder_delete"></span></li>',
+		cloned_new_folder_first_child = null;
 		$('.popup').hide();
 		$('.popup').removeClass('display-popup');
 		$('html').removeClass('hide-body');
 		if($('.manage-user-table').find('li').length)
 		{
 			if($('.manage-employee-folder').is(":visible")){
-				cloned_folder_div = '<li><span class="superadmin-user-wrap"><span class="superadmin-user-name"></span></span><span class="superadmin-user-delete"><img alt="Delete Folder" src="../images/deleteIcon.png" class="delete_folder new_folder_delete"></span></li>';
 				$('.manage-employee-folder').prepend(cloned_folder_div);
 				cloned_new_folder_first_child= $('.manage-employee-folder li').eq(0);
 				cloned_new_folder_first_child.find('.superadmin-user-name').text(new_folder_name);
-
-				cloned_new_folder_first_child.each(function () {
-					bindClickToLinkFolder();
-				});
 			}
 			else{
-				cloned_folder_div = '<li><span class="superadmin-user-wrap"><span class="superadmin-user-name"></span></span><span class="superadmin-user-delete"><img alt="Edit Folder" src="../images/editIcon.png" class="edit-employee edit-folder popup-link edit_folder new_folder_edit"><img alt="Delete Folder" src="../images/deleteIcon.png" class="delete_folder new_folder_delete"></span></li>';
 				$('.all-folders-list').prepend(cloned_folder_div);
 				cloned_new_folder_first_child= $('.all-folders-list li').eq(0);
 				cloned_new_folder_first_child.find('.superadmin-user-name').text(new_folder_name);
-
-				cloned_new_folder_first_child.each(function () {
-					bindClickToLinkFolder();
-				});
 			}
 		}
 		else{
@@ -230,44 +140,34 @@ $(document).ready(function() {
 			$('.manage-user-table').prepend(cloned_parent_folder_div);
 			var cloned_new_parent_folder_first_child= $('.manage-user-table li').eq(0);
 			cloned_new_parent_folder_first_child.find('.superadmin-user-name').text(new_folder_name);
-
-			cloned_new_parent_folder_first_child.each(function () {
-				bindClickToLinkFolder();
-			});
 		}
 	});
 
 //	DELETE USER
-	$('.delete_user').each(function(){
-		$(this).click(function() {
-			if (confirm("Delete The Employee?") == true) {
-				$(this).parent('.superadmin-user-delete').parent('li').remove();
-			} else {
-//				do nothing
-			}
-		});
+	$(document).on('click', '.delete_user',function(){
+		if (confirm("Delete The Employee?") == true) {
+			$(this).parent('.superadmin-user-delete').parent('li').remove();
+		} else {
+//			do nothing
+		}
 	});
 
 //	DELETE PARENT FOLDER
-	$('.delete_parent_folder').each(function(){
-		$(this).click(function() {
-			if (confirm("Delete All The Folders?") == true) {
-				$(this).parent('.superadmin-user-delete').parent('.all-folders-parent').parent('li').remove();
-			} else {
-//				do nothing
-			}
-		});
+	$(document).on('click', '.delete_parent_folder', function(){
+		if (confirm("Delete All The Folders?") == true) {
+			$(this).parent('.superadmin-user-delete').parent('.all-folders-parent').parent('li').remove();
+		} else {
+//			do nothing
+		}
 	});
 
 //	DELETE FOLDER LIST ITEM
-	$('.delete_folder').each(function(){
-		$(this).click(function() {
-			if (confirm("Delete The Folder?") == true) {
-				$(this).parent('.superadmin-user-delete').parent('li').remove();
-			} else {
-//				do nothing
-			}
-		});
+	$(document).on('click', '.delete_folder', function(){
+		if (confirm("Delete The Folder?") == true) {
+			$(this).parent('.superadmin-user-delete').parent('li').remove();
+		} else {
+//			do nothing
+		}
 	});
 
 //	CLOSE USER DROPDOWN WHEN CLICKED OUTSIDE
@@ -302,4 +202,31 @@ $(document).ready(function() {
 		});
 	});
 
+
+
 });
+
+
+//UPLOADING FILES
+
+function showMyFiles(fileInput){
+	var new_uploaded_file_item = null,
+	uploaded_file = fileInput.files;
+
+	for (var i = 0; i < uploaded_file.length; i++) {   
+		var new_uploaded_file = uploaded_file[i];
+		var new_uploaded_file_name = new_uploaded_file.name;
+		var uploaded_file_size = new_uploaded_file.size;
+		var new_uploaded_file_size = (uploaded_file_size / (1024)).toFixed(2);
+		var new_uploaded_file = '<li><span class="superadmin-user-wrap"><span class="superadmin-user-name">'+new_uploaded_file_name+'</span><span class="superadmin-user-email"><span class="folder-size">'+new_uploaded_file_size+' kb</span></span></span><span class="superadmin-user-delete"><img alt="Delete Folder" src="../images/deleteIcon.png" class="delete_folder new_file_delete"></span></li>';
+
+
+		if($('.manage-employee-folder').is(":visible")){
+			$('.manage-employee-folder').prepend(new_uploaded_file);
+		}
+		else{
+			$('.all-folders-list').prepend(new_uploaded_file);
+		}
+
+	}
+}
