@@ -180,10 +180,16 @@ $(document).ready(function() {
 	});
 
 	$(document).on('touchstart', function(){
-		$('.site-user-options').hide()
-		$('.popup').hide()
-		$('html').removeClass('hide-body');
-		$('.popup').removeClass('display-popup');
+		 if (!$(event.target).closest('.site-user-options').length) {
+				$('.site-user-options').hide()
+
+		 }
+		 if (!$(event.target).closest('.popup-content').length) {
+				$('.popup').hide()
+				$('html').removeClass('hide-body');
+				$('.popup').removeClass('display-popup');	 
+		 }
+
 	});
 
 
