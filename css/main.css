@@ -639,6 +639,8 @@ a#sticky_logo img {
 
 .hide-body {
 	overflow: hidden;
+	position: fixed;
+	width: 100%;
 }
 
 .popup-content, .login-popup-content {
