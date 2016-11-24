@@ -843,14 +843,20 @@ a#sticky_logo img {
 		padding-right: 15px;
 	}
 	.footer-content:nth-child(1) {
-		width: 48%;
+		width: 52%;
 	}
 	.footer-content:nth-child(2) {
-		width: 28%;
+		width: 30%;
 	}
 	.footer-content:nth-child(3) {
-		width: 15%;
+		width: 22%;
 		margin-top: 5px;
+	}
+	.social-icons {
+		text-align: right;
+	}
+	.copyright {
+		text-align: left;
 	}
 	.site-footer .footer-menu {
 		display: flex;
@@ -868,5 +874,15 @@ a#sticky_logo img {
 @media ( min-width : 1200px) {
 	.container {
 		width: 1170px;
+	}
+	.footer-content:nth-child(1) {
+		width: 42%;
+	}
+	.footer-content:nth-child(2) {
+		width: 35%;
+	}
+	.footer-content:nth-child(3) {
+		width: 25%;
+		margin-top: 5px;
 	}
 }
