@@ -171,12 +171,24 @@ $(document).ready(function() {
 	});
 
 //	CLOSE USER DROPDOWN WHEN CLICKED OUTSIDE
-	$(document).on('click','.site-wrapper', function(){
-		alert('clicked');
-		$(".site-user-options").hide();
-		$('.popup').hide();
-		$('.popup').removeClass('display-popup');
+	$(document).on('touchstart', function(){
+		if (!$(event.target).closest('.site-user-options').length) {
+			$('.site-user-options').hide()
+		}
+		if (!$(event.target).closest('.popup').length) {
+			$('.popup').hide()
+			$('html').removeClass('hide-body');
+			$('.popup').removeClass('display-popup');
+
+		}
+
+	});
+	$(document).on('click', function(){
+		$('.site-user-options').hide()
+		$('.popup').hide()
 		$('html').removeClass('hide-body');
+		$('.popup').removeClass('display-popup');
+
 	});
 
 //	OPENING AND CLOSING OF TABS IN MANAGE PAGE
@@ -204,21 +216,21 @@ $(document).ready(function() {
 	});
 
 	// CHANGING PROFILE PIC
-	 function readURL(input) {
-	        if (input.files && input.files[0]) {
-	            var reader = new FileReader();
-	            
-	            reader.onload = function (e) {
-	                $('.profile-pic-holder img').attr('src', e.target.result);
-	            }
-	            
-	            reader.readAsDataURL(input.files[0]);
-	        }
-	    }
-	    
-	    $("#profile_pic_input").change(function(){
-	        readURL(this);
-	    });
+	function readURL(input) {
+		if (input.files && input.files[0]) {
+			var reader = new FileReader();
+
+			reader.onload = function (e) {
+				$('.profile-pic-holder img').attr('src', e.target.result);
+			}
+
+			reader.readAsDataURL(input.files[0]);
+		}
+	}
+
+	$("#profile_pic_input").change(function(){
+		readURL(this);
+	});
 
 });
 
@@ -245,5 +257,5 @@ function showMyFiles(fileInput){
 		}
 
 	}
-	
+
 }
