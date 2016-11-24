@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>SUPERADMIN - Batchelor & Kimball</title>
+<title>PROFILE - Batchelor & Kimball</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description"
@@ -71,92 +71,65 @@
 		<!-- BREADCRUMB SECTION -->
 		<section class="page-heading">
 		    <div class="container">
-			     <h1>SUPER ADMIN PANEL</h1>
+			     <h1>EMPLOYEE PORTAL</h1>
 			</div>
 		</section>
 		<!-- BREADCRUMB SECTION END -->
 		
 		<!-- MAIN CONTENT SECTION -->
-		<section class="container main-content">
-		    <div class="superadmin-user-table">
+		<section class="container main-content profile-content">
+		    <div class="superadmin-user-table profile-detail-container">
 		        <div class="user-table-header">
-		            <span class="admin-acess-row">Admin Access</span>
-		             <span class="admin-add-new-employee popup-link add_new_employee">+ ADD NEW</span>
+		            <span class="admin-acess-row">Employee Details</span>
+		        </div>
+		        <div class="profile-detail-body">
+		        <form action="" id="profile-details-form">
+		        <div>
+					<div class="profile-basic-info-wrap">
+						<img alt="Profile Pic" src="../images/profilePic.png">
+						<span class="profile-basic-info">
+							<span class="profile-edit-info-wrap"><label for="profile_name">Name:</label>
+							     <input id="profile_name" type="text" value="John Doe"></span> 
+							<span class="profile-edit-info-wrap"><label for="profile_email">Email:</label>
+							      <input id="profile_email" type="email" value="john.doe@gmail.com"></span>
+						</span>
+						<div>
+						</div>
+						</div>
+						<div class="profile-other-info-wrap">
+						<span class="profile-edit-info-wrap"><label for="profile_address">Address:</label>
+							      <input id="profile_address" type="text" value="700, E 9th St"></span>
+						<span class="profile-other-info">
+					    <span class="profile-edit-info-wrap"><label for="profile_city">City:</label>
+							     <input id="profile_city" type="text" value="New York"></span> 
+							<span class="profile-edit-info-wrap"><label for="profile_state">State:</label>
+							      <input id="profile_state" type="text" value="NY"></span>
+							      <span class="profile-edit-info-wrap"><label for="profile_zip">ZIP:</label>
+							     <input id="profile_zip" type="tel" value="98789"></span> 
+							<span class="profile-edit-info-wrap"><label for="profile_phone">Phone:</label>
+							      <input id="profile_phone" type="tel" value="+1 999 999 9999"></span>
+					    </span>
+						</div>
+						</div>
+						<button class="update-button">UPDATE INFO</button>
+                   </form>
+               </div>
+		    </div>
+		    <div class="superadmin-user-table profile-doc-container">
+		        <div class="user-table-header">
+		            <span class="admin-acess-row">Employee Documents</span>
 		        </div>
 		        <ul class="user-table">
-		            <li>
-		                <span class="superadmin-user-wrap">
-		                    <span class="superadmin-user-name">John Doe</span>
-		                    <span class="superadmin-user-email">john.doe@gmail.com</span>
-		                </span>
-		                <span class="superadmin-user-delete">
-		                <img alt="Delete User" src="../images/deleteIcon.png" class="delete_user">
-		                </span>
-		            </li>
-		           <li>
-		                <span class="superadmin-user-wrap">
-		                    <span class="superadmin-user-name">John Doe</span>
-		                    <span class="superadmin-user-email">john.doe@gmail.com</span>
-		                </span>
-		                <span class="superadmin-user-delete">
-		                <img alt="Delete User" src="../images/deleteIcon.png" class="delete_user">
-		                </span>
-		            </li>
-		            <li>
-		                <span class="superadmin-user-wrap">
-		                    <span class="superadmin-user-name">John Doe</span>
-		                    <span class="superadmin-user-email">john.doe@gmail.com</span>
-		                </span>
-		                <span class="superadmin-user-delete">
-		                <img alt="Delete User" src="../images/deleteIcon.png" class="delete_user">
-		                </span>
-		            </li>
-		            <li>
-		                <span class="superadmin-user-wrap">
-		                    <span class="superadmin-user-name">John Doe</span>
-		                    <span class="superadmin-user-email">john.doe@gmail.com</span>
-		                </span>
-		                <span class="superadmin-user-delete">
-		                <img alt="Delete User" src="../images/deleteIcon.png" class="delete_user">
-		                </span>
-		            </li>
-		            <li>
-		                <span class="superadmin-user-wrap">
-		                    <span class="superadmin-user-name">John Doe</span>
-		                    <span class="superadmin-user-email">john.doe@gmail.com</span>
-		                </span>
-		                <span class="superadmin-user-delete">
-		                <img alt="Delete User" src="../images/deleteIcon.png" class="delete_user">
-		                </span>
-		            </li>
-		            <li>
-		                <span class="superadmin-user-wrap">
-		                    <span class="superadmin-user-name">John Doe</span>
-		                    <span class="superadmin-user-email">john.doe@gmail.com</span>
-		                </span>
-		                <span class="superadmin-user-delete">
-		                <img alt="Delete User" src="../images/deleteIcon.png" class="delete_user">
-		                </span>
-		            </li>
-		            <li>
-		                <span class="superadmin-user-wrap">
-		                    <span class="superadmin-user-name">John Doe</span>
-		                    <span class="superadmin-user-email">john.doe@gmail.com</span>
-		                </span>
-		                <span class="superadmin-user-delete">
-		                <img alt="Delete User" src="../images/deleteIcon.png" class="delete_user">
-		                </span>
-		            </li>
-		            <li>
-		                <span class="superadmin-user-wrap">
-		                    <span class="superadmin-user-name">John Doe</span>
-		                    <span class="superadmin-user-email">john.doe@gmail.com</span>
-		                </span>
-		                <span class="superadmin-user-delete">
-		                <img alt="Delete User" src="../images/deleteIcon.png" class="delete_user">
-		                </span>
-		            </li>
+		        <li>
+		         <span class="superadmin-user-wrap"><span class="superadmin-user-name">Employee.doc</span>
+		            <span class="superadmin-user-email">212 kb</span></span>
+		        <a href="../downloadableFiles/BKI_website content.docx" download>
+		           <img alt="download">
+		        </a>
+		        </li>
+		        
 		        </ul>
+		           
 		    </div>
 		
 		</section>
