@@ -535,19 +535,25 @@ a#sticky_logo img {
 .edit-employee, .delete_user, .delete_folder, .delete_parent_folder {
 	width: 14px;
 	vertical-align: super;
+	padding: 10px 0 10px 10px;
 }
 
 .superadmin-user-table.profile-doc-container {
-	margin-top: 30px
+	margin-top: 15px
 }
 /* PROFILE PAGE */
 .profile-detail-body {
 	padding: 15px 20px;
 }
 
-.profile-basic-info-wrap>img {
+.profile-basic-info-wrap>label>img {
 	border-radius: 10px;
 	width: 115px;
+	height: 110px;
+}
+
+#profile_pic_input {
+	display: none;
 }
 
 .profile-basic-info-wrap {
