@@ -19,11 +19,11 @@ $(document).ready(function() {
 	});
 
 //	MAKE TOP HEADER BAR ICON TOGGLE ARROWS IN MOBILE
-	$('.top-bar .close').click(function() {
+	$(document).on('click', '.top-bar .close',function() {
 		$('.top-bar').toggleClass('open');
 	});
 //	OPEN USER DROPDOWN ON CLICK
-	$('.site-user').click(function(e) {
+	$(document).on('click', '.site-user',function(e) {
 		$('.site-user-options').toggle();
 		e.stopPropagation();
 	});
@@ -41,7 +41,7 @@ $(document).ready(function() {
 		e.stopPropagation();
 	});
 
-	$('.popup-content').click(function(e) {
+	$(document).on('click', '.popup-content', function(e) {
 		e.stopPropagation();
 	});
 
@@ -51,7 +51,7 @@ $(document).ready(function() {
 		$('#edit_employee_name').val($(this).parent('.superadmin-user-delete').siblings('.superadmin-user-wrap').find('.superadmin-user-name').text());
 		$('#edit_employee_id').val($(this).parent('.superadmin-user-delete').siblings('.superadmin-user-wrap').find('.superadmin-user-email').text());
 
-		$('#edit_employee_btn').click(function(){
+		$(document).on('click', '#edit_employee_btn', function(){
 			$('.popup').hide();
 			$('.popup').removeClass('display-popup');
 			$('html').removeClass('hide-body');
@@ -67,7 +67,7 @@ $(document).ready(function() {
 	$(document).on('click', '.edit-parent-folder', function() {
 		$('#edit_folder_name').val($(this).parent('.superadmin-user-delete').siblings('.superadmin-user-wrap').find('.superadmin-user-name').text());
 
-		$('#edit_folder_btn').click(function(){
+		$(document).on('click', '#edit_folder_btn', function(){
 			$('.popup').hide();
 			$('.popup').removeClass('display-popup');
 			$('html').removeClass('hide-body');
@@ -82,7 +82,7 @@ $(document).ready(function() {
 		var edit_folder_row_item = $(this).parent('.superadmin-user-delete').parent('li').index();
 		$('#edit_folder_name').val($(this).parent('.superadmin-user-delete').siblings('.superadmin-user-wrap').find('.superadmin-user-name').text());
 
-		$('#edit_folder_btn').click(function(){
+		$(document).on('click', '#edit_folder_btn', function(){
 			$('.popup').hide();
 			$('.popup').removeClass('display-popup');
 			$('html').removeClass('hide-body');
@@ -93,7 +93,7 @@ $(document).ready(function() {
 	});
 
 //	ADD NEW EMPLOYEE
-	$('#add_new_employee_btn').click(function() {
+	$(document).on('click', '#add_new_employee_btn', function() {
 		var new_employee_name = $(this).siblings('#new_employee_name').val();
 		var new_employee_id = $(this).siblings('#new_employee_id').val();
 		var cloned_div=null;
@@ -115,7 +115,7 @@ $(document).ready(function() {
 	});
 
 //	ADD NEW FOLDER
-	$('#add_new_folder_btn').click(function() {
+	$(document).on('click', '#add_new_folder_btn', function() {
 		var new_folder_name = $(this).siblings('#new_folder_name').val();
 		var cloned_folder_div = '<li><span class="superadmin-user-wrap"><span class="superadmin-user-name"></span></span><span class="superadmin-user-delete"><img alt="Edit Folder" src="../images/editIcon.png" class="edit-employee edit-folder popup-link edit_folder new_folder_edit"><img alt="Delete Folder" src="../images/deleteIcon.png" class="delete_folder new_folder_delete"></span></li>',
 		cloned_new_folder_first_child = null;
@@ -171,7 +171,7 @@ $(document).ready(function() {
 	});
 
 //	CLOSE USER DROPDOWN WHEN CLICKED OUTSIDE
-	$(document).click(function(){
+	$(document).on('click',function(){
 		$(".site-user-options").hide();
 		$('.popup').hide();
 		$('.popup').removeClass('display-popup');
