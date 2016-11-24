@@ -172,6 +172,7 @@ $(document).ready(function() {
 
 //	CLOSE USER DROPDOWN WHEN CLICKED OUTSIDE
 	$(document).on('click','body', function(){
+		alert('clicked');
 		$(".site-user-options").hide();
 		$('.popup').hide();
 		$('.popup').removeClass('display-popup');
