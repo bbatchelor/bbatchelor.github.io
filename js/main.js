@@ -181,7 +181,6 @@ $(document).ready(function() {
 
 	$(document).on('touchstart', function(){
 		$('.site-user-options').hide()
-		alert('popup');
 		$('.popup').hide()
 		$('html').removeClass('hide-body');
 		$('.popup').removeClass('display-popup');
