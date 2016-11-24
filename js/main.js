@@ -171,18 +171,6 @@ $(document).ready(function() {
 	});
 
 //	CLOSE USER DROPDOWN WHEN CLICKED OUTSIDE
-	$(document).on('touchstart', function(){
-		if (!$(event.target).closest('.site-user-options').length) {
-			$('.site-user-options').hide()
-		}
-		if (!$(event.target).closest('.popup').length) {
-			$('.popup').hide()
-			$('html').removeClass('hide-body');
-			$('.popup').removeClass('display-popup');
-
-		}
-
-	});
 	$(document).on('click', function(){
 		$('.site-user-options').hide()
 		$('.popup').hide()
@@ -190,6 +178,22 @@ $(document).ready(function() {
 		$('.popup').removeClass('display-popup');
 
 	});
+	
+	$(document).on('touchstart', function(){
+		if (!$(event.target).closest('.site-user-options').length) {
+			alert('top nav');
+			$('.site-user-options').hide()
+		}
+		if (!$(event.target).closest('.popup').length) {
+			alert('popup');
+			$('.popup').hide()
+			$('html').removeClass('hide-body');
+			$('.popup').removeClass('display-popup');
+
+		}
+
+	});
+
 
 //	OPENING AND CLOSING OF TABS IN MANAGE PAGE
 	$('.tabs .tab-links a').on('click', function(e)  {
