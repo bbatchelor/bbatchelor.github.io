@@ -47,6 +47,10 @@ a, a:hover, a:focus, a:active {
 	text-decoration: none;
 }
 
+input:focus, button:focus {
+	outline: none;
+}
+
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 @import url('https://fonts.googleapis.com/css?family=PT+Sans');
@@ -279,7 +283,7 @@ a#sticky_logo img {
 	color: #fff;
 	display: none;
 	position: absolute;
-	width: 100%;
+	width: auto;
 	z-index: 1;
 	right: 10px;
 	font-size: 13px;
@@ -306,6 +310,8 @@ a#sticky_logo img {
 
 .site-user-options li>a {
 	color: inherit;
+	white-space: nowrap;
+	display: block;
 }
 
 /* FOOTER SECTION */
@@ -455,7 +461,7 @@ a#sticky_logo img {
 	line-height: 2;
 }
 
-.modify-files-wrap input,.manage-employee-folder {
+.modify-files-wrap input, .manage-employee-folder {
 	display: none;
 }
 
@@ -463,7 +469,7 @@ a#sticky_logo img {
 	font-size: 14px;
 }
 
-.back-to-all,.all-folders-list .superadmin-user-wrap{
+.back-to-all, .all-folders-list .superadmin-user-wrap {
 	cursor: pointer;
 }
 
@@ -526,11 +532,81 @@ a#sticky_logo img {
 	margin-right: 30px;
 }
 
-.edit-employee, .delete_user,.delete_folder,.delete_parent_folder {
+.edit-employee, .delete_user, .delete_folder, .delete_parent_folder {
 	width: 14px;
 	vertical-align: super;
 }
 
+.superadmin-user-table.profile-doc-container {
+	margin-top: 30px
+}
+/* PROFILE PAGE */
+.profile-detail-body {
+	padding: 15px 20px;
+}
+
+.profile-basic-info-wrap>img {
+	border-radius: 10px;
+	width: 115px;
+}
+
+.profile-basic-info-wrap {
+	text-align: center;
+}
+
+.profile-basic-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	font-family: 'Montserrat', sans-serif;
+	text-align: left;
+}
+
+.profile-edit-info-wrap {
+	display: block;
+	width: 100%;
+	padding: 14px 0;
+	border-bottom: 1px solid #bebebe;
+	display: flex;
+}
+
+.profile-edit-info-wrap>label {
+	color: #b64445;
+}
+
+.profile-edit-info-wrap>input {
+	color: #7e7e7e;
+	border: none;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	font-size: 14px;
+	width: 100%;
+	font-size: 14px;
+}
+
+.profile-other-info-wrap {
+	margin-top: 15px;
+}
+
+.update-button {
+	margin-top: 30px;
+	width: 70%;
+	max-width: 365px;
+	float: right;
+	padding: 12px 0;
+	border-radius: 5px;
+	background-color: #850d0c;
+	box-shadow: 0 0 3.5px 0 rgba(0, 0, 0, 0.35);
+	border: none;
+	color: #fff;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 0;
+}
+
+#profile-details-form {
+	overflow: hidden;
+}
 /* POPUPS */
 .popup, .login-popup {
 	background-color: rgba(255, 255, 255, 0.9);
@@ -591,10 +667,6 @@ a#sticky_logo img {
 	font-weight: bold;
 }
 
-.popup-body button:focus, .popup-body input:focus {
-	outline: none;
-}
-
 .popup-body button {
 	margin-top: 30px;
 	width: 100%;
@@ -624,7 +696,7 @@ a#sticky_logo img {
 	float: right;
 }
 
-span.popup-body-text {
+.popup-body-text {
 	display: block;
 	text-align: center;
 	font-weight: normal;
@@ -659,6 +731,46 @@ span.popup-body-text {
 	}
 	.upload_new_folder {
 		margin-left: 25px;
+	}
+	.profile-content {
+		display: block;
+	}
+	.profile-basic-info-wrap, .profile-other-info {
+		display: flex;
+		justify-content: space-between;
+	}
+	.profile-basic-info-wrap {
+		text-align: left;
+	}
+	.profile-basic-info {
+		width: calc(100% - 140px);
+	}
+	.superadmin-user-table.profile-detail-container {
+		width: 60%;
+		margin-right: 20px;
+		float: left;
+	}
+	.superadmin-user-table.profile-doc-container {
+		width: calc(39% - 20px);
+		margin-top: 0;
+		float: right;
+	}
+	.profile-other-info {
+		flex-wrap: wrap;
+	}
+	.profile-other-info>.profile-edit-info-wrap {
+		width: 45%;
+	}
+	#profile-details-form {
+		display: flex;
+		flex-direction: column;
+		height: 450px;
+	}
+	#profile-details-form>div:first-child {
+		flex: 1;
+	}
+	.update-button {
+		align-self: flex-end;
 	}
 }
 
