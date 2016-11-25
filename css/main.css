@@ -129,6 +129,13 @@ html {
 	height: 27px;
 	width: auto;
 	color: inherit;
+	font-weight: normal;
+	text-shadow: 0.5px 0 0 #c1c1c1;
+}
+
+.top-bar>.container>ul>li>a:hover {
+	color: #b64445;
+	text-shadow: 0.5px 0 0 #b64445;
 }
 
 .top-bar .close {
@@ -345,12 +352,15 @@ a#sticky_logo img {
 }
 
 .footer-menu li a {
-	font-size: 13.5px;
+	font-size: 13px;
 	color: inherit;
+	font-weight: normal;
+	text-shadow: 0.5px 0 0 #d9d9d9;
 }
 
 .footer-menu li a:hover {
 	color: #b64445;
+	text-shadow: 0 0 0 #b64445;
 }
 
 .copyright {
@@ -872,9 +882,6 @@ a#sticky_logo img {
 	.site-footer .footer-menu>li {
 		width: auto;
 		float: left;
-	}
-	.footer-menu li a {
-		font-size: 14px;
 	}
 }
 
