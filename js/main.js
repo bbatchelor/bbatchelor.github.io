@@ -16,6 +16,7 @@ $(document).ready(function() {
 			sticky.removeClass('sticky');
 			sticky.addClass('unstick');
 		}
+		$('.site-user-options').hide()
 	});
 
 //	MAKE TOP HEADER BAR ICON TOGGLE ARROWS IN MOBILE
