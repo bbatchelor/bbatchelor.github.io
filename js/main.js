@@ -178,7 +178,8 @@ $(document).ready(function() {
 
 
 //	CLOSE USER DROPDOWN WHEN CLICKED OUTSIDE
-	$(document).on('click', function(){
+	$(document).on('click', function(event){
+		if( !event ) event = window.event;
 		if (!$(event.target).closest('.site-user-options').length && !$(event.target).closest('.site-user').length) {
 			$('.site-user-options').hide();
 

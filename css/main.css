@@ -135,7 +135,6 @@ html {
 	height: 27px;
 	width: auto;
 	color: inherit;
-	font-weight: bold;
 }
 
 .top-bar>.container>ul>li>a:hover {
@@ -361,7 +360,6 @@ a#sticky_logo img {
 .footer-menu li a {
 	font-size: 13px;
 	color: inherit;
-	font-weight: bold;
 }
 
 .footer-menu li a:hover {
@@ -941,21 +939,24 @@ a#sticky_logo img {
 		display: block !important;
 		margin: auto;
 	}
-	.popup, .login-popup {
+	.popup, .login-popup, .popup-content, .login-popup-content {
 		position: absolute;
 	}
 	.popup-content, .login-popup-content {
-		position: absolute;
 		top: 27%;
 		left: 0;
 		right: 0;
 	}
 	.site-wrapper {
-		display: block;
 		min-height: initial;
 	}
 	.profile-content {
 		clear: both;
+	}
+	.user-table-header, .site-wrapper {
+		display: block;
+	}
+	.superadmin-user-table, .profile-content {
 		overflow: hidden;
 	}
 }
