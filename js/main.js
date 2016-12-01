@@ -7,7 +7,7 @@ $(document).ready(function() {
 		var sticky = $('.nav-wrap');
 		//scroll = $(window).scrollTop();
 
-		if ($(document).scrollTop() > 100) 
+		if ($(window).scrollTop() > 100) 
 		{
 			$(".nav-placeholder").height(sticky.outerHeight());
 			sticky.addClass('sticky');
