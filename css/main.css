@@ -870,6 +870,7 @@ a#sticky_logo img {
 	.nav-wrap {
 		padding-top: 5px;
 		padding-bottom: 5px;
+		height: 70px;
 	}
 	.page-heading {
 		padding: 38px 0 33px 0;
