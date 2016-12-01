@@ -26,7 +26,7 @@ $(document).ready(function() {
 //	OPEN USER DROPDOWN ON CLICK
 	$(document).on('click', '.site-user',function(e) {
 		$('.site-user-options').toggle();
-		e.stopPropagation();
+		//e.stopPropagation();
 	});
 
 //	OPEN POPUP
@@ -39,11 +39,11 @@ $(document).ready(function() {
 				$('html').addClass('hide-body');
 			}
 		});
-		e.stopPropagation();
+		//e.stopPropagation();
 	});
 
 	$(document).on('click', '.popup-content', function(e) {
-		e.stopPropagation();
+		//e.stopPropagation();
 	});
 
 //	EDIT EMPLOYEE
@@ -146,50 +146,64 @@ $(document).ready(function() {
 
 //	DELETE USER
 	$(document).on('click', '.delete_user',function(){
-		if (confirm("Delete The Employee?") == true) {
-			$(this).parent('.superadmin-user-delete').parent('li').remove();
-		} else {
-//			do nothing
-		}
+		$(this).delay(300).queue(function() {
+			if (confirm("Delete The Employee?") == true) {
+				$(this).parent('.superadmin-user-delete').parent('li').remove();
+			} else {
+//				do nothing
+			}
+			$(this).dequeue();
+		});      
 	});
 
 //	DELETE PARENT FOLDER
 	$(document).on('click', '.delete_parent_folder', function(){
-		if (confirm("Delete All The Folders?") == true) {
-			$(this).parent('.superadmin-user-delete').parent('.all-folders-parent').parent('li').remove();
-		} else {
-//			do nothing
-		}
+		$(this).delay(300).queue(function() {
+			if (confirm("Delete All The Folders?") == true) {
+				$(this).parent('.superadmin-user-delete').parent('.all-folders-parent').parent('li').remove();
+			} else {
+//				do nothing
+			}
+			$(this).dequeue();
+		});      
 	});
 
 //	DELETE FOLDER LIST ITEM
 	$(document).on('click', '.delete_folder', function(){
-		if (confirm("Delete The Folder?") == true) {
-			$(this).parent('.superadmin-user-delete').parent('li').remove();
-		} else {
-//			do nothing
-		}
+		$(this).delay(300).queue(function() {
+			if (confirm("Delete The Folder?") == true) {
+				$(this).parent('.superadmin-user-delete').parent('li').remove();
+			} else {
+//				do nothing
+			}
+			$(this).dequeue();
+		});  
 	});
+
 
 //	CLOSE USER DROPDOWN WHEN CLICKED OUTSIDE
 	$(document).on('click', function(){
-		$('.site-user-options').hide()
-		$('.popup').hide()
-		$('html').removeClass('hide-body');
-		$('.popup').removeClass('display-popup');
+		if (!$(event.target).closest('.site-user-options').length && !$(event.target).closest('.site-user').length) {
+			$('.site-user-options').hide();
 
+		}
+		if (!$(event.target).closest('.popup-content').length && !$(event.target).closest('.popup-link').length) {
+			$('.popup').hide();
+			$('html').removeClass('hide-body');
+			$('.popup').removeClass('display-popup');
+		}
 	});
 
 	$(document).on('touchstart', function(){
-		 if (!$(event.target).closest('.site-user-options').length) {
-				$('.site-user-options').hide()
+		if (!$(event.target).closest('.site-user-options').length) {
+			$('.site-user-options').hide();
 
-		 }
-		 if (!$(event.target).closest('.popup-content').length) {
-				$('.popup').hide()
-				$('html').removeClass('hide-body');
-				$('.popup').removeClass('display-popup');	 
-		 }
+		}
+		if (!$(event.target).closest('.popup-content').length) {
+			$('.popup').hide();
+			$('html').removeClass('hide-body');
+			$('.popup').removeClass('display-popup');	 
+		}
 
 	});
 

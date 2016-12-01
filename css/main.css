@@ -51,9 +51,12 @@ input:focus, button:focus {
 	outline: none;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
-
 @import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url('../fonts/Montserrat-Regular.otf') format('opentype')
+}
 
 html {
 	text-rendering: optimizeLegibility !important;
@@ -62,14 +65,17 @@ html {
 	overflow-y: scroll;
 	-webkit-overflow-scrolling: touch;
 	font-family: 'PT Sans', sans-serif;
-	font-weight: bold;
 	-webkit-tap-highlight-color: transparent;
 }
 
 .site-wrapper {
 	background-color: #fff;
-	display: flex;
-	flex-direction: column;
+	display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+	-ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
 	min-height: 100vh;
 }
 
@@ -129,13 +135,11 @@ html {
 	height: 27px;
 	width: auto;
 	color: inherit;
-	font-weight: normal;
-	text-shadow: 0.5px 0 0 #c1c1c1;
+	font-weight: bold;
 }
 
 .top-bar>.container>ul>li>a:hover {
 	color: #b64445;
-	text-shadow: 0.5px 0 0 #b64445;
 }
 
 .top-bar .close {
@@ -282,12 +286,11 @@ a#sticky_logo img {
 
 .site-username-wrap span {
 	display: inline-block;
-	font-family: 'Montserrat', sans-serif;
+	font-family: Montserrat;
 }
 
 .site-user-options {
-	background: #000;
-	color: #fff;
+	background: #e7e7e7;
 	display: none;
 	position: absolute;
 	width: auto;
@@ -305,20 +308,24 @@ a#sticky_logo img {
 	width: 0;
 	position: absolute;
 	pointer-events: none;
-	border-bottom-color: #000000;
+	border-bottom-color: #e7e7e7;
 	border-width: 5px;
 }
 
 .site-user-options li {
 	padding: 7px 10px;
 	border-top: 1px solid #fff;
-	font-family: 'Montserrat', sans-serif
+	font-family: Montserrat;
 }
 
 .site-user-options li>a {
 	color: inherit;
 	white-space: nowrap;
 	display: block;
+	color: #313131;
+}
+.site-user-options li>a:hover{
+	color: #b64445;
 }
 
 /* FOOTER SECTION */
@@ -354,12 +361,11 @@ a#sticky_logo img {
 .footer-menu li a {
 	font-size: 13px;
 	color: inherit;
-	font-weight: normal;
+	font-weight: bold;
 }
 
 .footer-menu li a:hover {
 	color: #b64445;
-	text-shadow: 0 0 0 #b64445;
 }
 
 .copyright {
@@ -368,6 +374,7 @@ a#sticky_logo img {
 	text-align: center;
 	display: block;
 	font-size: 14px;
+	font-weight: bold;
 }
 
 .social-icons {
@@ -395,7 +402,7 @@ a#sticky_logo img {
 .page-heading {
 	box-shadow: none;
 	margin-bottom: 20px;
-	font-family: 'Montserrat', sans-serif;
+	font-family: Montserrat;
 	color: #292929;
 	font-size: 14px;
 	padding: 20px 0;
@@ -404,10 +411,11 @@ a#sticky_logo img {
 
 .page-heading h1, .page-heading.tab-links li>a {
 	font-size: 14px;
-	font-family: 'Montserrat', sans-serif;
+	font-family: Montserrat;
 	float: left;
 	margin: 0;
 	text-transform: uppercase;
+	font-weight: bold;
 }
 
 .page-heading.tab-links li>a {
@@ -434,7 +442,9 @@ a#sticky_logo img {
 
 /* MAIN CONTENT */
 .main-content, .manage-page-container {
-	flex: 1;
+	-ms-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
 }
 
 /* SUPERADMIN */
@@ -447,7 +457,7 @@ a#sticky_logo img {
 .user-table-header {
 	background-color: #e7e7e7;
 	padding: 16px 20px;
-	font-family: 'Montserrat', sans-serif;
+	font-family: Montserrat;
 	font-size: 16px;
 	line-height: 2.75;
 	text-align: left;
@@ -456,7 +466,9 @@ a#sticky_logo img {
 
 .user-table-header, .user-table>li, .all-folders-parent,
 	.all-folders-list>li {
-	display: flex;
+	display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
 	justify-content: space-between;
 }
 
@@ -476,6 +488,7 @@ a#sticky_logo img {
 
 .admin-add-new-employee, .admin-acess-row, .superadmin-user-wrap {
 	font-size: 14px;
+	font-family: Montserrat;
 }
 
 .back-to-all, .all-folders-list .superadmin-user-wrap {
@@ -570,10 +583,14 @@ a#sticky_logo img {
 }
 
 .profile-basic-info {
-	display: flex;
-	flex-direction: column;
+	display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+	-ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
 	justify-content: flex-end;
-	font-family: 'Montserrat', sans-serif;
+	font-family: Montserrat;
 	text-align: left;
 }
 
@@ -582,7 +599,9 @@ a#sticky_logo img {
 	width: 100%;
 	padding: 14px 0;
 	border-bottom: 1px solid #bebebe;
-	display: flex;
+	 display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
 }
 
 .profile-edit-info-wrap>label {
@@ -592,8 +611,7 @@ a#sticky_logo img {
 .profile-edit-info-wrap>input {
 	color: #7e7e7e;
 	border: none;
-	font-family: 'Montserrat', sans-serif;
-	font-weight: bold;
+	font-family: Montserrat;
 	width: 80%;
 	font-size: 14px;
 	margin-left: 5px;
@@ -615,7 +633,6 @@ a#sticky_logo img {
 	border: none;
 	color: #fff;
 	font-size: 12px;
-	font-weight: bold;
 	padding: 12px 0;
 }
 
@@ -642,7 +659,9 @@ a#sticky_logo img {
 }
 
 .popup.display-popup, .login-popup {
-	display: flex !important;
+	 display: -ms-flexbox!important;
+    display: -webkit-flex!important;
+    display: flex!important;
 }
 
 .hide-body {
@@ -667,6 +686,7 @@ a#sticky_logo img {
 	text-align: center;
 	padding: 25px 0;
 	color: #2a2a2a;
+	font-weight: bold;
 }
 
 .login-popup .popup-header img {
@@ -689,7 +709,6 @@ a#sticky_logo img {
 	box-shadow: none;
 	margin-bottom: 5px;
 	width: 100%;
-	font-weight: bold;
 }
 
 .popup-body button {
@@ -706,7 +725,9 @@ a#sticky_logo img {
 }
 
 .login-extra-link-wrap {
-	display: flex;
+	 display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
 	justify-content: space-between;
 }
 
@@ -726,7 +747,7 @@ a#sticky_logo img {
 	text-align: center;
 	font-weight: normal;
 	margin-bottom: 20px;
-	color: #7c7c7c;
+	color: #313131;
 }
 
 /* ALL MEDIA QUERIES */
@@ -761,6 +782,8 @@ a#sticky_logo img {
 		display: block;
 	}
 	.profile-basic-info-wrap, .profile-other-info {
+		display: -ms-flexbox;
+		display: -webkit-flex;
 		display: flex;
 		justify-content: space-between;
 	}
@@ -787,11 +810,17 @@ a#sticky_logo img {
 		width: 45%;
 	}
 	#profile-details-form {
+		display: -ms-flexbox;
+		display: -webkit-flex;
 		display: flex;
+		-ms-flex-direction: column;
+		-webkit-flex-direction: column;
 		flex-direction: column;
 		height: 450px;
 	}
 	#profile-details-form>div:first-child {
+		-ms-flex: 1;
+		-webkit-flex: 1;
 		flex: 1;
 	}
 	.update-button {
@@ -807,6 +836,8 @@ a#sticky_logo img {
 
 @media ( min-width : 993px) {
 	.top-bar>.container>ul.right {
+		display: -ms-flexbox;
+		display: -webkit-flex;
 		display: flex;
 		justify-content: flex-end;
 	}
@@ -848,6 +879,8 @@ a#sticky_logo img {
 	}
 	.row {
 		margin: 0 -15px;
+		display: -ms-flexbox;
+		display: -webkit-flex;
 		display: flex;
 	}
 	.footer-content {
@@ -875,6 +908,8 @@ a#sticky_logo img {
 		text-align: left;
 	}
 	.site-footer .footer-menu {
+		display: -ms-flexbox;
+		display: -webkit-flex;
 		display: flex;
 		justify-content: space-between;
 	}
