@@ -1,23 +1,25 @@
 $(document).ready(function() {
 
 //	MAKE HEADER FIXED ON TOP AFTER SCROLL
-//	var stickyOffset = 100;
-//
-//	$(window).scroll(function(){
-//		var sticky = $('.nav-wrap'),
-//		scroll = $(window).scrollTop();
-//
-//		if (scroll >= stickyOffset) 
-//		{
-//			sticky.addClass('sticky');
-//			sticky.removeClass('unstick');
-//		}
-//		else {
-//			sticky.removeClass('sticky');
-//			sticky.addClass('unstick');
-//		}
-//		$('.site-user-options').hide()
-//	});
+	var stickyOffset = 100;
+
+	$(window).scroll(function(){
+		var sticky = $('.nav-wrap');
+		//scroll = $(window).scrollTop();
+
+		if ($(document).scrollTop() > 100) 
+		{
+			$(".nav-placeholder").height(sticky.outerHeight());
+			sticky.addClass('sticky');
+			sticky.removeClass('unstick');
+		}
+		else {
+			$(".nav-placeholder").height(sticky.outerHeight());
+			sticky.removeClass('sticky');
+			sticky.addClass('unstick');
+		}
+		$('.site-user-options').hide()
+	});
 
 //	MAKE TOP HEADER BAR ICON TOGGLE ARROWS IN MOBILE
 	$(document).on('click', '.top-bar .close',function() {
