@@ -962,4 +962,10 @@ a#sticky_logo img {
 	.admin-add-new-employee {
 		float: right;
 	}
+	.modify-files-wrap>.admin-add-new-employee {
+		float: none;
+	}
+	.modify-files-wrap {
+		text-align: right;
+	}
 }
