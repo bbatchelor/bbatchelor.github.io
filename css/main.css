@@ -959,13 +959,10 @@ a#sticky_logo img {
 	.superadmin-user-table, .profile-content {
 		overflow: hidden;
 	}
-	.admin-add-new-employee {
+	.admin-add-new-employee, .modify-files-wrap {
 		float: right;
 	}
 	.modify-files-wrap>.admin-add-new-employee {
 		float: none;
-	}
-	.modify-files-wrap {
-		text-align: right;
 	}
 }
