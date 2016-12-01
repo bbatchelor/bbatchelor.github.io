@@ -5,7 +5,6 @@ $(document).ready(function() {
 
 	$(window).scroll(function(){
 		var sticky = $('.nav-wrap');
-		//scroll = $(window).scrollTop();
 
 		if ($(window).scrollTop() > 100) 
 		{
@@ -28,7 +27,6 @@ $(document).ready(function() {
 //	OPEN USER DROPDOWN ON CLICK
 	$(document).on('click', '.site-user',function(e) {
 		$('.site-user-options').toggle();
-		//e.stopPropagation();
 	});
 
 //	OPEN POPUP
@@ -41,12 +39,8 @@ $(document).ready(function() {
 				$('html').addClass('hide-body');
 			}
 		});
-		//e.stopPropagation();
 	});
 
-	$(document).on('click', '.popup-content', function(e) {
-		//e.stopPropagation();
-	});
 
 //	EDIT EMPLOYEE
 	$(document).on('click', '.edit-employee',function() {
@@ -197,11 +191,11 @@ $(document).ready(function() {
 	});
 
 	$(document).on('touchstart', function(){
-		if (!$(event.target).closest('.site-user-options').length) {
+		if (!$(event.target).closest('.site-user-options').length && !$(event.target).closest('.site-user').length) {
 			$('.site-user-options').hide();
 
 		}
-		if (!$(event.target).closest('.popup-content').length) {
+		if (!$(event.target).closest('.popup-content').length && !$(event.target).closest('.popup-link').length) {
 			$('.popup').hide();
 			$('html').removeClass('hide-body');
 			$('.popup').removeClass('display-popup');	 

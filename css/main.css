@@ -936,3 +936,26 @@ a#sticky_logo img {
 		margin-top: 5px;
 	}
 }
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+.popup.display-popup, .login-popup {
+		display: block !important;
+		margin: auto;
+	}
+	.popup, .login-popup {
+		position: absolute;
+	}
+	.popup-content, .login-popup-content {
+		position: absolute;
+		top: 27%;
+		left: 0;
+		right: 0;
+	}
+	.site-wrapper {
+		display: block;
+		min-height: initial;
+	}
+	.profile-content {
+		clear: both;
+		overflow: hidden;
+	}
+}
