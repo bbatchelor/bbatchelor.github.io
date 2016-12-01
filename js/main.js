@@ -14,7 +14,7 @@ $(document).ready(function() {
 			sticky.removeClass('unstick');
 		}
 		else {
-			$(".nav-placeholder").height(sticky.outerHeight());
+			$(".nav-placeholder").height(0);
 			sticky.removeClass('sticky');
 			sticky.addClass('unstick');
 		}
