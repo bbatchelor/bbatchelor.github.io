@@ -14,9 +14,9 @@ $(document).ready(function() {
 			sticky.removeClass('unstick');
 		}
 		else {
-			$(".nav-placeholder").height(0);
 			sticky.removeClass('sticky');
 			sticky.addClass('unstick');
+			$(".nav-placeholder").height(0);
 		}
 		$('.site-user-options').hide()
 	});
