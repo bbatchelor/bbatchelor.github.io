@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 //	MAKE HEADER FIXED ON TOP AFTER SCROLL
-	var stickyOffset = 34;
+	var stickyOffset = 40;
 
 	$(window).scroll(function(){
 		var sticky = $('.nav-wrap'),
