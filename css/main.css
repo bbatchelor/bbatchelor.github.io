@@ -959,4 +959,7 @@ a#sticky_logo img {
 	.superadmin-user-table, .profile-content {
 		overflow: hidden;
 	}
+	.admin-add-new-employee {
+		float: right;
+	}
 }
