@@ -245,6 +245,11 @@ $(document).ready(function() {
 	$("#profile_pic_input").change(function(){
 		readURL(this);
 	});
+	
+	//Profile Pic Uploaded for IE
+	$('.profile-pic-holder').click(function() {
+		  $('#' + $(this).attr('for')).click();
+		});
 
 });
 
