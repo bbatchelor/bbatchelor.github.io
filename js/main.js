@@ -98,10 +98,10 @@ $(document).ready(function() {
 		$('.popup').removeClass('display-popup');
 		$('html').removeClass('hide-body');
 		if(!$('.add_new_employee').parent('.user-table-header').next('.user-table').children('li').find('.edit-employee').length){
-			cloned_div = '<li><span class="superadmin-user-wrap"><span class="superadmin-user-name"></span><span class="superadmin-user-email"></span></span><span class="superadmin-user-delete"><img alt="Delete User" src="../images/deleteIcon.png" class="delete_user new_user_delete"></span></li>';
+			cloned_div = '<li><span class="superadmin-user-wrap"><span class="superadmin-user-name"></span><span class="superadmin-user-email"></span></span><span class="superadmin-user-delete"><img alt="Delete User" src="../images/deleteIcon.png" class="delete-icon popup-link delete_user new_user_delete"></span></li>';
 		}
 		else{
-			cloned_div = '<li><span class="superadmin-user-wrap"><span class="superadmin-user-name"></span><span class="superadmin-user-email"></span></span><span class="superadmin-user-delete"><img alt="Edit User" src="../images/editIcon.png" class="edit-employee popup-link edit_employees new_user_edit"><img alt="Delete User" src="../images/deleteIcon.png" class="delete_user new_user_delete"></span></li>';
+			cloned_div = '<li><span class="superadmin-user-wrap"><span class="superadmin-user-name"></span><span class="superadmin-user-email"></span></span><span class="superadmin-user-delete"><img alt="Edit User" src="../images/editIcon.png" class="edit-employee popup-link edit_employees new_user_edit"><img alt="Delete User" src="../images/deleteIcon.png" class="delete-icon popup-link delete_user new_user_delete"></span></li>';
 		}
 		$('.user-table').prepend(cloned_div);
 
@@ -114,7 +114,7 @@ $(document).ready(function() {
 //	ADD NEW FOLDER
 	$(document).on('click', '#add_new_folder_btn', function() {
 		var new_folder_name = $(this).siblings('#new_folder_name').val();
-		var cloned_folder_div = '<li><span class="superadmin-user-wrap"><span class="superadmin-user-name"></span></span><span class="superadmin-user-delete"><img alt="Edit Folder" src="../images/editIcon.png" class="edit-employee edit-folder popup-link edit_folder new_folder_edit"><img alt="Delete Folder" src="../images/deleteIcon.png" class="delete_folder new_folder_delete"></span></li>',
+		var cloned_folder_div = '<li><span class="superadmin-user-wrap"><span class="superadmin-user-name"></span></span><span class="superadmin-user-delete"><img alt="Edit Folder" src="../images/editIcon.png" class="edit-employee edit-folder popup-link edit_folder new_folder_edit"><img alt="Delete Folder" src="../images/deleteIcon.png" class="delete-icon popup-link delete_folder new_folder_delete"></span></li>',
 		cloned_new_folder_first_child = null;
 		$('.popup').hide();
 		$('.popup').removeClass('display-popup');
@@ -133,7 +133,7 @@ $(document).ready(function() {
 			}
 		}
 		else{
-			var cloned_parent_folder_div = '<li><span class="all-folders-parent"><span class="superadmin-user-wrap"><span class="superadmin-user-name"></span><span class="superadmin-user-email"><span class="folder-number">212</span> Folders, <span class="file-number">22</span> Files</span></span><span class="superadmin-user-delete"><img alt="Edit Folder" src="../images/editIcon.png" class="edit-employee edit-folder popup-link edit_folder new_folder_edit"><img alt="Delete Folder" src="../images/deleteIcon.png" class="delete_folder new_folder_delete"></span></span><ul class="all-folders-list"></ul></li>';
+			var cloned_parent_folder_div = '<li><span class="all-folders-parent"><span class="superadmin-user-wrap"><span class="superadmin-user-name"></span><span class="superadmin-user-email"><span class="folder-number">212</span> Folders, <span class="file-number">22</span> Files</span></span><span class="superadmin-user-delete"><img alt="Edit Folder" src="../images/editIcon.png" class="edit-employee edit-folder popup-link edit_folder new_folder_edit"><img alt="Delete Folder" src="../images/deleteIcon.png" class="delete-icon popup-link delete_folder new_folder_delete"></span></span><ul class="all-folders-list"></ul></li>';
 			$('.manage-user-table').prepend(cloned_parent_folder_div);
 			var cloned_new_parent_folder_first_child= $('.manage-user-table li').eq(0);
 			cloned_new_parent_folder_first_child.find('.superadmin-user-name').text(new_folder_name);
