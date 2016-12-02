@@ -229,7 +229,6 @@ a#sticky_logo img {
 	z-index: 1200;
 	top: 0;
 	margin-top: 0;
-	padding: 0;
 	-webkit-transition: all 100ms ease-out 0s;
 	-moz-transition: all 100ms ease-out 0s;
 	-o-transition: all 100ms ease-out 0s;
@@ -613,6 +612,7 @@ a#sticky_logo img {
 	width: 80%;
 	font-size: 14px;
 	margin-left: 5px;
+	margin-bottom: 2px;
 }
 
 .profile-other-info-wrap {
@@ -674,7 +674,7 @@ a#sticky_logo img {
 	background-color: #ffffff;
 	box-shadow: 0 0 3.5px 0 rgba(0, 0, 0, 0.35);
 	width: 90%;
-	max-width: 390px;
+	max-width: 290px;
 	margin: auto;
 	padding-bottom: 20px;
 }
@@ -721,6 +721,12 @@ a#sticky_logo img {
 	color: #fff;
 	font-size: 12px;
 	font-weight: bold;
+}
+
+#delete-icon .popup-body>form>button {
+    width: 60px;
+    display: table-cell;
+    margin: 0 10px;
 }
 
 .login-extra-link-wrap {
@@ -846,8 +852,8 @@ a#sticky_logo img {
 		width: auto;
 		padding-right: 15px;
 		margin-left: -1px;
-		padding-top: 5px;
-		padding-bottom: 5px;
+		padding-top: 4px;
+		padding-bottom: 4px;
 		padding-left: 13px;
 		margin: 0;
 		border-left: 1px solid transparent;
@@ -868,7 +874,7 @@ a#sticky_logo img {
 	.nav-wrap {
 		padding-top: 5px;
 		padding-bottom: 5px;
-		height: 70px;
+		height: 60px;
 	}
 	.page-heading {
 		padding: 38px 0 33px 0;

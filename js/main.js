@@ -140,40 +140,61 @@ $(document).ready(function() {
 		}
 	});
 
-//	DELETE USER
-	$(document).on('click', '.delete_user',function(){
-		$(this).delay(300).queue(function() {
-			if (confirm("Delete The Employee?") == true) {
-				$(this).parent('.superadmin-user-delete').parent('li').remove();
-			} else {
-//				do nothing
-			}
-			$(this).dequeue();
-		});      
-	});
-
-//	DELETE PARENT FOLDER
-	$(document).on('click', '.delete_parent_folder', function(){
-		$(this).delay(300).queue(function() {
-			if (confirm("Delete All The Folders?") == true) {
-				$(this).parent('.superadmin-user-delete').parent('.all-folders-parent').parent('li').remove();
-			} else {
-//				do nothing
-			}
-			$(this).dequeue();
-		});      
-	});
 
 //	DELETE FOLDER LIST ITEM
-	$(document).on('click', '.delete_folder', function(){
-		$(this).delay(300).queue(function() {
-			if (confirm("Delete The Folder?") == true) {
-				$(this).parent('.superadmin-user-delete').parent('li').remove();
-			} else {
-//				do nothing
+	$(document).on('click', '.delete-icon', function(){
+		var class_name = $(this).attr('class');
+		var delete_row_item = $(this).parent('.superadmin-user-delete').parent('li').index();
+
+		if(class_name.indexOf('delete_folder') != -1){
+			$('#delete-icon').find('.popup-header').text('Delete Folder?');
+
+			if($(this).parent('.superadmin-user-delete').parents('.all-folders-list').length){
+				$('#confirm').on('click', function(){
+					$('.all-folders-list li').eq(delete_row_item).remove();
+					$('.popup').hide();
+					$('html').removeClass('hide-body');
+					$('.popup').removeClass('display-popup');
+				});
 			}
-			$(this).dequeue();
-		});  
+			else if($(this).parent('.superadmin-user-delete').parents('.user-table').length){
+				$('#confirm').on('click', function(){
+					$('.popup').hide();
+					$('html').removeClass('hide-body');
+					$('.popup').removeClass('display-popup');
+					$('.user-table li').eq(delete_row_item).remove();
+				});
+			}
+		}
+
+
+		else if(class_name.indexOf('delete_parent_folder') != -1){
+
+			$('#delete-icon').find('.popup-header').text('Delete All The Folders?');
+			$('#confirm').on('click', function(){
+				$('.popup').hide();
+				$('html').removeClass('hide-body');
+				$('.popup').removeClass('display-popup');
+			$('.all-folders-parent').parent('li').remove();
+			});
+		}
+
+		else if(class_name.indexOf('delete_user') != -1){
+			$('#delete-icon').find('.popup-header').text('Delete The Employee?');
+			$('#confirm').on('click', function(){
+				$('.popup').hide();
+				$('html').removeClass('hide-body');
+				$('.popup').removeClass('display-popup');
+			$('.user-table li').eq(delete_row_item).remove();
+
+			});
+		}
+		$('#cancel').on('click', function(){
+			$('.popup').hide();
+			$('html').removeClass('hide-body');
+			$('.popup').removeClass('display-popup');
+		});
+
 	});
 
 
@@ -245,11 +266,11 @@ $(document).ready(function() {
 	$("#profile_pic_input").change(function(){
 		readURL(this);
 	});
-	
+
 	//Profile Pic Uploaded for IE
 	$('.profile-pic-holder').click(function() {
-		  $('#' + $(this).attr('for')).click();
-		});
+		$('#' + $(this).attr('for')).click();
+	});
 
 });
 
