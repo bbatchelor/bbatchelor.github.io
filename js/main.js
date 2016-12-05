@@ -198,6 +198,7 @@ $(document).ready(function() {
 			});
 		}
 		$('#cancel').on('click', function(){
+			delete_row_item = undefined;
 			$('.popup').hide();
 			$('html').removeClass('hide-body');
 			$('.popup').removeClass('display-popup');
