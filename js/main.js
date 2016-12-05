@@ -56,6 +56,7 @@ $(document).ready(function() {
 			var edit_employee_id = $(this).siblings('#edit_employee_id').val();
 			$('.user-table li').eq(edit_row_item).find('.superadmin-user-name').text(edit_employee_name);
 			$('.user-table li').eq(edit_row_item).find('.superadmin-user-email').text(edit_employee_id);
+			edit_row_item = undefined;
 		});
 
 	});
@@ -84,7 +85,9 @@ $(document).ready(function() {
 			$('.popup').removeClass('display-popup');
 			$('html').removeClass('hide-body');
 			var edit_folder_name = $(this).siblings('#edit_folder_name').val();
+			alert(edit_folder_row_item);
 			$('.all-folders-list li').eq(edit_folder_row_item).find('.superadmin-user-name').text(edit_folder_name);
+			edit_folder_row_item = undefined;
 		});
 
 	});
