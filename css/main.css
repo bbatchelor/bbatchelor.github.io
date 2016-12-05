@@ -729,7 +729,6 @@ a#sticky_logo img {
 
 #delete-icon .popup-body>form>button {
     width: 60px;
-    display: table-cell;
     margin: 0 10px;
 }
 
@@ -946,9 +945,6 @@ a#sticky_logo img {
 }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
 		
-		#delete-icon .popup-body>form>button {
-		display: inline-block !important;
-	}
 	.popup.display-popup, .login-popup {
 		display: block !important;
 		margin: auto;
