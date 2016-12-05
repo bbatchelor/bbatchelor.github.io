@@ -975,7 +975,7 @@ a#sticky_logo img {
 	.modify-files-wrap>.admin-add-new-employee {
 		float: none;
 	}
-	#delete-icon .popup-body>form>button {
+	#delete-icon.popup .popup-body form button {
 		display: inline-block;
 	}
 }
