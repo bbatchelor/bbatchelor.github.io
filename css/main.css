@@ -312,6 +312,7 @@ a#sticky_logo img {
 
 .site-user-options li {
 	padding: 7px 10px;
+	min-width: 145px;
 	border-top: 1px solid #fff;
 	font-family: Montserrat;
 }
@@ -513,7 +514,7 @@ a#sticky_logo img {
 }
 
 .superadmin-user-wrap, .superadmin-user-wrap>span,
-	.superadmin-user-delete {
+	.superadmin-user-delete, .employee-content .manage-employee-folder{
 	display: block;
 }
 

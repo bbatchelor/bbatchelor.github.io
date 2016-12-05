@@ -296,7 +296,7 @@ function showMyFiles(fileInput){
 		var new_uploaded_file_name = new_uploaded_file.name;
 		var uploaded_file_size = new_uploaded_file.size;
 		var new_uploaded_file_size = (uploaded_file_size / (1024)).toFixed(2);
-		var new_uploaded_file = '<li><span class="superadmin-user-wrap"><span class="superadmin-user-name">'+new_uploaded_file_name+'</span><span class="superadmin-user-email"><span class="folder-size">'+new_uploaded_file_size+' kb</span></span></span><span class="superadmin-user-delete"><img alt="Delete Folder" src="../images/deleteIcon.png" class="delete_folder new_file_delete"></span></li>';
+		var new_uploaded_file = '<li><span class="superadmin-user-wrap"><span class="superadmin-user-name">'+new_uploaded_file_name+'</span><span class="superadmin-user-email"><span class="folder-size">'+new_uploaded_file_size+' kb</span></span></span><span class="superadmin-user-delete"><img alt="Delete Folder" src="../images/deleteIcon.png" class="delete-icon popup-link delete_folder new_file_delete"></span></li>';
 
 
 		if($('.manage-employee-folder').is(":visible")){
