@@ -679,6 +679,10 @@ a#sticky_logo img {
 	padding-bottom: 20px;
 }
 
+.login-popup-content {
+	max-width: 320px;
+}
+
 .popup-header {
 	font-size: 16px;
 	display: block;
@@ -970,5 +974,8 @@ a#sticky_logo img {
 	}
 	.modify-files-wrap>.admin-add-new-employee {
 		float: none;
+	}
+	#delete-icon .popup-body>form>button {
+		display: inline-block;
 	}
 }
