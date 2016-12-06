@@ -321,7 +321,7 @@ a#sticky_logo img {
 	font-family: Montserrat;
 }
 
-.site-user-options li :first-child{
+.site-user-options li:first-child{
 	border-top: none;
 }
 
