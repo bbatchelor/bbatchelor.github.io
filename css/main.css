@@ -295,6 +295,10 @@ a#sticky_logo img {
 	z-index: 1;
 	right: 10px;
 	font-size: 13px;
+	-webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+	box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+	border-radius: 10px
 }
 
 .site-user-options:after {
@@ -315,6 +319,10 @@ a#sticky_logo img {
 	min-width: 145px;
 	border-top: 1px solid #fff;
 	font-family: Montserrat;
+}
+
+.site-user-options li :first-child{
+	border-top: none;
 }
 
 .site-user-options li>a {
