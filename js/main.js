@@ -61,37 +61,6 @@ $(document).ready(function() {
 
 	});
 
-//	EDIT PARENT FOLDER NAME
-	$(document).on('click', '.edit-parent-folder', function() {
-		$('#edit_folder_name').val($(this).parent('.superadmin-user-delete').siblings('.superadmin-user-wrap').find('.superadmin-user-name').text());
-
-		$(document).on('click', '#edit_folder_btn', function(){
-			$('.popup').hide();
-			$('.popup').removeClass('display-popup');
-			$('html').removeClass('hide-body');
-			var edit_parent_folder_name = $(this).siblings('#edit_folder_name').val();
-			$('.manage-user-table').find('.all-folders-parent').find('.superadmin-user-name').text(edit_parent_folder_name);
-		});
-
-	});
-
-//	EDIT FOLDER NAME
-	$(document).on('click', '.edit-folder',function() {
-		var edit_folder_row_item = $(this).parent('.superadmin-user-delete').parent('li').index();
-		$('#edit_folder_name').val($(this).parent('.superadmin-user-delete').siblings('.superadmin-user-wrap').find('.superadmin-user-name').text());
-
-		$(document).on('click', '#edit_folder_btn', function(){
-			$('.popup').hide();
-			$('.popup').removeClass('display-popup');
-			$('html').removeClass('hide-body');
-			var edit_folder_name = $(this).siblings('#edit_folder_name').val();
-			alert(edit_folder_row_item);
-			$('.all-folders-list li').eq(edit_folder_row_item).find('.superadmin-user-name').text(edit_folder_name);
-			edit_folder_row_item = undefined;
-		});
-
-	});
-
 //	ADD NEW EMPLOYEE
 	$(document).on('click', '#add_new_employee_btn', function() {
 		var new_employee_name = $(this).siblings('#new_employee_name').val();
