@@ -69,7 +69,7 @@ html {
 }
 
 .site-wrapper {
-	background-color: #fff;
+	background-color: #ececec;
 	display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
@@ -447,6 +447,10 @@ a#sticky_logo img {
 }
 
 /* MAIN CONTENT */
+.main-content {
+	background-color: transparent;
+}
+
 .main-content, .manage-page-container {
 	-ms-flex: 1;
     -webkit-flex: 1;
@@ -458,6 +462,7 @@ a#sticky_logo img {
 	border-radius: 5px;
 	border: 0.5px solid #bebebe;
 	width: 100%;
+	background-color: #fff;
 }
 
 .user-table-header {
