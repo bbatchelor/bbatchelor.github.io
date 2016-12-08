@@ -788,17 +788,17 @@ a#sticky_logo img {
 	a#sticky_logo img {
 		max-width: 100%;
 	}
-}
-
-@media ( min-width : 768px) {
-	.container {
-		width: 750px;
-	}
 	.site-username-wrap span {
 		font-size: 14px;
 	}
 	.site-user {
 		padding: 9px 10px;
+	}
+}
+
+@media ( min-width : 768px) {
+	.container {
+		width: 750px;
 	}
 	.modify-files-wrap>.admin-add-new-employee {
 		display: inline-block;
