@@ -941,11 +941,12 @@ a#sticky_logo img {
 		display: -ms-flexbox;
 		display: -webkit-flex;
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-start;
 	}
 	.site-footer .footer-menu>li {
 		width: auto;
 		float: left;
+		padding: 0 10px;
 	}
 }
 
