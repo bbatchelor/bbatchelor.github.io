@@ -941,7 +941,7 @@ a#sticky_logo img {
 		display: -ms-flexbox;
 		display: -webkit-flex;
 		display: flex;
-		justify-content: space-start;
+		justify-content: flex-start;
 	}
 	.site-footer .footer-menu>li {
 		width: auto;
