@@ -650,20 +650,10 @@ a#sticky_logo img {
 	font-weight: bold;
 }
 
-.profile-action-buttons {
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-end;
-	display: -webkit-flex;
-	display: flex;
-}
-
 .change_password,#profile-details-form .update-button  {
 	padding: 12px 50px;
 	font-weight: bold;
-	width: auto;
+	width: 100%;
 	float: none;
 	max-width: none;
 }
@@ -875,6 +865,20 @@ a#sticky_logo img {
 	}
 	.update-button {
 		align-self: flex-end;
+	}
+	.profile-action-buttons {
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+	}
+	.change_password, #profile-details-form .update-button {
+		padding: 12px 0px;
+		font-weight: bold;
+		width: 190px;
+		float: none;
+		max-width: none;
 	}
 }
 
