@@ -827,6 +827,9 @@ a#sticky_logo img {
 		margin-right: 20px;
 		float: left;
 	}
+	.superadmin-user-table.profile-detail-container.employee-table{
+	    width: 100%
+	}
 	.superadmin-user-table.profile-doc-container {
 		width: calc(39% - 20px);
 		margin-top: 0;

@@ -116,7 +116,10 @@
 					    </span>
 						</div>
 						</div>
+						<div>
+						<span class="popup-link change_password">CHANGE PASSWORD</span>
 						<button class="update-button">UPDATE INFO</button>
+						</div>
                    </form>
                </div>
 		    </div>
@@ -174,14 +177,15 @@
 	</div>
 	
 	<!-- POPUPS -->
-	<section id="add_new_employee" class="popup">
+	<section id="change_password" class="popup">
 	    <div class="popup-content">
-	        <span class="popup-header">Add New Employee</span>
+	        <span class="popup-header">Change Password</span>
 	        <div class="popup-body">
 	        <form id="add_new_employee_form">
-	            <input type="text" id="new_employee_name" placeholder="Name">
-	            <input type="email" id="new_employee_id" placeholder="Email ID">
-	            <button type="button" id="add_new_employee_btn">ADD</button>
+	            <input type="password" id="old_password" placeholder="Old Password">
+	            <input type="password" id="new_password" placeholder="New Password">
+	             <input type="password" id="confirm_new_password" placeholder="Confirm New Password">
+	            <button type="button" id="change_password_btn">UPDATE</button>
 	        </form>
 	        </div>
 	    </div>
