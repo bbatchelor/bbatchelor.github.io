@@ -880,6 +880,11 @@ a#sticky_logo img {
 		float: none;
 		max-width: none;
 	}
+	.profile-detail-container.employee-table .change_password, 
+	.profile-detail-container.employee-table #profile-details-form .update-button{
+	    width: 47%;
+	    max-width: 320px;
+	}
 }
 
 @media ( min-width : 992px) {

@@ -203,7 +203,13 @@ $(document).ready(function() {
 		}
 
 	});
-
+	
+//	CLOSING OF CHANGE PASSWORD POPUP
+	$('#change_password_btn').on('click', function(e)  {
+		$('.popup').hide();
+		$('html').removeClass('hide-body');
+		$('.popup').removeClass('display-popup');
+	});
 
 //	OPENING AND CLOSING OF TABS IN MANAGE PAGE
 	$('.tabs .tab-links a').on('click', function(e)  {
