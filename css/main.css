@@ -634,7 +634,7 @@ a#sticky_logo img {
 	margin-top: 15px;
 }
 
-.update-button {
+.update-button,.change_password {
 	margin-top: 30px;
 	width: 70%;
 	max-width: 365px;
@@ -661,14 +661,11 @@ a#sticky_logo img {
 }
 
 .change_password,#profile-details-form .update-button  {
-	border-radius: 5px;
-	background-color: #850d0c;
-	box-shadow: 0 0 3.5px 0 rgba(0, 0, 0, 0.35);
-	border: none;
-	color: #fff;
-	font-size: 12px;
-	padding: 12px 0;
+	padding: 12px 50px;
 	font-weight: bold;
+	width: auto;
+	float: none;
+	max-width: none;
 }
 
 #profile-details-form {
