@@ -528,12 +528,16 @@ a#sticky_logo img {
 }
 
 .superadmin-user-wrap, .superadmin-user-wrap>span,
-	.superadmin-user-delete, .employee-content .manage-employee-folder{
+	.superadmin-user-delete, .employee-content .manage-employee-folder {
 	display: block;
 }
 
 .superadmin-user-email {
 	color: #7e7e7e;
+}
+
+.superadmin-user-name {
+	cursor: pointer;
 }
 
 .superadmin-user-delete {
