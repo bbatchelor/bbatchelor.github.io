@@ -369,10 +369,12 @@ a#sticky_logo img {
 .footer-menu li a {
 	font-size: 13px;
 	color: inherit;
+	text-shadow: 0 0 0 rgb(217,217,217);
 }
 
 .footer-menu li a:hover {
 	color: #b64445;
+	text-shadow: 0 0 0 #b64445;
 }
 
 .copyright {
