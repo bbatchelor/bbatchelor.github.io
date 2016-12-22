@@ -964,14 +964,11 @@ a#sticky_logo img {
 		width: 30%;
 	}
 	.footer-content:nth-child(3) {
-		width: 22%;
+		width: 10%;
 		margin-top: 5px;
 	}
-	.social-icons {
+	.social-icons,.copyright {
 		text-align: right;
-	}
-	.copyright {
-		text-align: left;
 	}
 	.site-footer .footer-menu {
 		display: -ms-flexbox;
@@ -994,11 +991,10 @@ a#sticky_logo img {
 		width: 42%;
 	}
 	.footer-content:nth-child(2) {
-		width: 35%;
+		width: 71%;
 	}
 	.footer-content:nth-child(3) {
-		width: 25%;
-		margin-top: 5px;
+		width: 11%;
 	}
 }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
