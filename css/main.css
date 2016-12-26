@@ -725,6 +725,10 @@ a#sticky_logo img {
 	max-width: 230px;
 }
 
+.popup .popup-header img {
+	max-width: 230px;
+}
+
 .popup-body {
 	text-align: center;
 	padding: 40px 30px 0px;
