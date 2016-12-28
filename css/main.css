@@ -288,7 +288,7 @@ a#sticky_logo img {
 	font-size: 10px;
 }
 
-.site-user-options {
+.site-user-options,.upload-file-options {
 	background: #e7e7e7;
 	display: none;
 	position: absolute;
@@ -302,9 +302,18 @@ a#sticky_logo img {
 	border-radius: 10px
 }
 
-.site-user-options:after {
-	bottom: 97%;
-	right: 5px;
+.upload-file-options{
+	background: #f1f1f1;
+}
+
+.upload-file-options .admin-add-new-employee{
+    color: #313131;
+    font-size: 13px;
+}
+
+.site-user-options:after, .upload-file-options:after {
+	bottom:100%;
+	right: 17px;
 	border: solid transparent;
 	content: " ";
 	height: 0;
@@ -315,24 +324,29 @@ a#sticky_logo img {
 	border-width: 5px;
 }
 
-.site-user-options li {
+.upload-file-options:after{
+    right: 23px;
+    border-bottom-color: #f1f1f1;
+}
+
+.site-user-options li,.upload-file-options li {
 	padding: 7px 10px;
 	min-width: 145px;
 	border-top: 1px solid #fff;
 	font-family: Montserrat;
 }
 
-.site-user-options li:first-child{
+.site-user-options li:first-child, .upload-file-options li:first-child{
 	border-top: none;
 }
 
-.site-user-options li>a {
+.site-user-options li>a, .upload-file-options li {
 	color: inherit;
 	white-space: nowrap;
 	display: block;
 	color: #313131;
 }
-.site-user-options li>a:hover{
+.site-user-options li>a:hover, .upload-file-options li:hover{
 	color: #b64445;
 }
 
@@ -797,7 +811,7 @@ a#sticky_logo img {
 		font-size: 14px;
 		line-height: 1.5;
 	}
-	.admin-add-new-employee {
+	.admin-add-new-employee, .upload-file-options .admin-add-new-employee{
 		font-size: 11px;
 	}
 }

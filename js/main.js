@@ -17,7 +17,8 @@ $(document).ready(function() {
 			sticky.addClass('unstick');
 			$(".nav-placeholder").height(0);
 		}
-		$('.site-user-options').hide()
+		$('.site-user-options').hide();
+		$('.upload-file-options').hide();
 	});
 
 //	MAKE TOP HEADER BAR ICON TOGGLE ARROWS IN MOBILE
@@ -27,6 +28,12 @@ $(document).ready(function() {
 //	OPEN USER DROPDOWN ON CLICK
 	$(document).on('click', '.site-user',function(e) {
 		$('.site-user-options').toggle();
+	});
+	
+	
+//	OPEN USER DROPDOWN ON CLICK
+	$(document).on('click', '.upload_new_folder',function(e) {
+		$('.upload-file-options').toggle();
 	});
 
 //	OPEN POPUP
@@ -184,6 +191,10 @@ $(document).ready(function() {
 			$('.site-user-options').hide();
 
 		}
+		if (!$(event.target).closest('.upload-file-options').length && !$(event.target).closest('.upload_new_folder').length) {
+			$('.upload-file-options').hide();
+
+		}
 		if (!$(event.target).closest('.popup-content').length && !$(event.target).closest('.popup-link').length) {
 			$('.popup').hide();
 			$('html').removeClass('hide-body');
@@ -194,6 +205,10 @@ $(document).ready(function() {
 	$(document).on('touchstart', function(){
 		if (!$(event.target).closest('.site-user-options').length && !$(event.target).closest('.site-user').length) {
 			$('.site-user-options').hide();
+
+		}
+		if (!$(event.target).closest('.upload-file-options').length && !$(event.target).closest('.upload_new_folder').length) {
+			$('.upload-file-options').hide();
 
 		}
 		if (!$(event.target).closest('.popup-content').length && !$(event.target).closest('.popup-link').length) {

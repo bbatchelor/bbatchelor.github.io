@@ -171,9 +171,20 @@
 					<div class="user-table-header">
 						<span class="admin-acess-row">Files</span> 
 						<span class="modify-files-wrap"> 
-						    <label class="admin-add-new-employee upload_new_folder" for="upload_new_file">+ UPLOAD
-								NEW FILE</label>
-							<input id="upload_new_file" type="file" multiple="multiple" onchange="showMyFiles(this)">
+						    <span class="admin-add-new-employee upload_new_folder">+ UPLOAD
+								NEW FILE</span>
+							<ul class="upload-file-options">
+						     <li>
+						         <label class="admin-add-new-employee" for="upload_new_common_file">Upload
+							 Common File</label>
+							<input id="upload_new_common_file" type="file" multiple="multiple" onchange="showMyFiles(this)">
+						     </li>
+						    <li>
+						        <label class="admin-add-new-employee" for="upload_new_employee_file">Upload
+							 Employee File</label>
+							<input id="upload_new_employee_file" type="file" multiple="multiple" onchange="showMyFiles(this)">
+						    </li>
+						</ul>
 						</span>
 					</div>
 					
