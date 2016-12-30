@@ -1002,11 +1002,11 @@ a#sticky_logo img {
 }
 
 @media ( min-width : 1200px) {
-	.top-bar .container{
-	    width: 100%;
-	}
 	.container {
 		width: 1170px;
+	}
+	.top-bar .container {
+		width: 100%;
 	}
 	.footer-content:nth-child(1) {
 		width: 42%;
