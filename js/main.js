@@ -242,11 +242,13 @@ $(document).ready(function() {
 		$('.manage-user-table').hide();
 		$('.manage-employee-folder').show();
 		$('#manage_files').find('.admin-acess-row').html('<span class="back-to-all">All</span> > '+row_user_name);
-
+                 $('.upload_new_folder').html('<label class="admin-add-new-employee" for="upload_new_common_file">+ UPLOAD NEW FILE</label>'+
+							'<input id="upload_new_common_file" type="file" multiple="multiple" onchange="showMyFiles(this)">');
 		$('.back-to-all').click(function() {
 			$('.manage-user-table').show();
 			$('.manage-employee-folder').hide();
 			$('#manage_files').find('.admin-acess-row').html('Files & Folders');
+			$('.upload_new_folder').html('+ UPLOAD NEW FILE');
 		});
 	});
 
