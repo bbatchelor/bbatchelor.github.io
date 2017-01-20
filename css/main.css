@@ -552,7 +552,7 @@ a#sticky_logo img {
 	color: #7e7e7e;
 }
 
-.superadmin-user-name {
+.manage-employee-folder.user-table .superadmin-user-name {
 	cursor: pointer;
 }
 
