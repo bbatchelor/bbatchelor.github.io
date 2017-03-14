@@ -80,18 +80,33 @@ html {
 }
 /*SUCCESS MESSAGE*/
 .success-message {
-    color: green;
-    font-size: 14px;
     font-family: Montserrat;
+    background-color: #c1faa9;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    color: #727272;
+    font-size: 14px;
+    padding: 12px;
+    position: relative;
+    clear: both;
+    margin: 0;
+    border-radius: 2px;
     margin-bottom: 10px;
 }
 
 /*ERROR MESSAGE*/
 .error-message {
-    color: red;
-    font-size: 14px;
     font-family: Montserrat;
+    background-color: #ffccc8;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    color: #727272;
+    font-size: 14px;
+    padding: 12px;
+    position: relative;
+    clear: both;
+    margin: 0;
+    border-radius: 2px;
     margin-bottom: 10px;
+
 }
 /* HEADER SECTION */
 .top-bar {
